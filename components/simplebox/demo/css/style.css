@@ -1,0 +1,44 @@
+body {
+  font-size: 1.125em;
+  line-height: 1.6;
+  font-family: Avenir, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  margin: 30px auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+  transition: border-color 200ms ease-in;
+  padding-bottom: -2px;
+}
+
+a:hover {
+  border-color: rgba(0, 0, 0, 0.6);
+}
+
+.container {
+  max-width: 728px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.container img {
+  height: 70%;
+  width: 70%;
+}
+
+.title {
+  display: inline-block;
+  font-weight: 500;
+  border-bottom: 4px solid black;
+}
+
+

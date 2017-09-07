@@ -1,0 +1,113 @@
+.ring-socials {
+  display: inline-block;
+  padding: 20px 0 0;
+  white-space: nowrap;
+  @include respond-to(tablets-small) {
+    display: block;
+    padding: 20px 0;
+  }
+  &.white {
+    li a {
+      background-color: #fff;
+      &.fb, &.twitter, &.linkedin, &.instagram, &.google {
+        color: #424559;
+        &:hover, &:focus, &:active {
+          color: #fff;
+        }
+      }
+    }
+  }
+  &.colored {
+    li {
+      margin: 0 0 5px 5px;
+      a {
+        &.fb, &.twitter, &.linkedin, &.instagram, &.google {
+          color: #fff;
+          &:hover, &:focus, &:active {
+            color: #fff;
+            opacity: .8;
+          }
+        }
+        &.fb {
+          background-color: #3b5998;
+        }
+        &.twitter {
+          background-color: #1da1f2;
+        }
+        &.linkedin {
+          background-color: #0077b5;
+        }
+        &.instagram {
+          background-color: #125688;
+        }
+        &.google {
+          background-color: #d34836;
+        }
+      }
+    }
+  }
+  li {
+    display: inline-block;
+    margin-left: 5px;
+    &:first-child {
+      margin-left: 0;
+      padding-left: 0;
+    }
+    &:before {
+      margin-left: -9999px;
+    }
+    a {
+      display: block;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      border-radius: 20px;
+      //background-color: #fafafa;
+      background-color: rgba(0, 0, 0, .1);
+      i {
+        line-height: 40px;
+      }
+      &.fb, &.twitter, &.linkedin, &.instagram, &.google {
+        color: #fff;
+        &:hover, &:focus, &:active {
+          color: #fff;
+        }
+      }
+      &.fb {
+        &:hover, &:focus, &:active {
+          background-color: #3b5998;
+        }
+      }
+      &.twitter {
+        &:hover, &:focus, &:active {
+          background-color: #1da1f2;
+        }
+      }
+      &.linkedin {
+        &:hover, &:focus, &:active {
+          background-color: #0077b5;
+        }
+      }
+      &.instagram {
+        &:hover, &:focus, &:active {
+          background-color: #125688;
+        }
+      }
+      &.google {
+        &:hover, &:focus, &:active {
+          background-color: #d34836;
+        }
+      }
+
+      /**
+      * social background color
+      */
+      background-color: #3c3e50; // default color
+      &.white {
+        background-color: #fff;
+        color: #6a6d81;
+      }
+
+    }
+  }
+}

@@ -1,0 +1,218 @@
+.webinars {
+  padding-top: 60px;
+  padding-bottom: 100px;
+  .top {
+    .title {
+      color: #2072E1;
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      line-height: 19px;
+      text-align: center;
+      padding-bottom: 20px;
+      text-transform: uppercase;
+    }
+    .description {
+      color: #8B8EA8;
+      font-family: Roboto;
+      font-size: 16px;
+      line-height: 26px;
+      text-align: center;
+      padding-bottom: 60px;
+    }
+  }
+  .item {
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.04);
+    .image {
+      position: relative;
+      &:before {
+        content: '';
+        display: block;
+        position: relative;
+        vertical-align: top;
+        padding-top: 77%;
+      }
+      .label {
+        padding: 3px 12px;
+        color: #FFFFFF;
+        font-family: Roboto;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 11px;
+        text-align: center;
+        border-radius: 2px;
+        background-color: #237DEA;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        margin: 0;
+      }
+    }
+    .speaker {
+      min-height: 295px;
+      padding: 91px 20px 20px;
+      box-sizing: border-box;
+      position: relative;
+      .avatar {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        span {
+          display: inline-block;
+          width: 50px;
+          height: 50px;
+          border-radius: 100%;
+        }
+      }
+      .info {
+        position: absolute;
+        left: 80px;
+        top: 28px;
+        * {
+          color: #8B8EA8;
+          font-family: Roboto;
+          font-size: 13px;
+          font-weight: 500;
+          line-height: 17px;
+        }
+        .by {
+
+        }
+        .name {
+          color: #000
+        }
+      }
+      .title {
+        color: #424559;
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+      }
+      .description {
+        padding-top: 8px;
+        color: #8B8EA8;
+        font-family: Roboto;
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+  }
+  .bottom {
+    .title {
+      color: #2072E1;
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      line-height: 19px;
+      text-align: center;
+      padding: 50px 0 20px;
+      text-transform: uppercase;
+    }
+    .description {
+      color: #8B8EA8;
+      font-family: Roboto;
+      font-size: 16px;
+      line-height: 26px;
+      text-align: center;
+      padding-bottom: 60px;
+    }
+  }
+
+  .block {
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    position: relative;
+    min-height: 300px;
+    &:before {
+      content: '';
+      display: block;
+      position: relative;
+      vertical-align: top;
+      padding-top: 65%;
+    }
+    .label {
+      padding: 5px 8px;
+      color: #FFFFFF;
+      font-family: Roboto;
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 11px;
+      border-radius: 2px;
+      background-color: #2572DE;
+      margin: 0;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+    .info {
+      position: absolute;
+      top: 52px;
+      left: 20px;
+      right: 20px;
+      .title {
+        color: #FFFFFF;
+        font-family: Roboto;
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 36px;
+      }
+      .date-location {
+        color: #FFFFFF;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+        padding-top: 16px;
+      }
+    }
+
+    .users {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      .user {
+        display: inline-block;
+        margin-left: -24px;
+        &:first-child {
+          margin-left: 0px;
+        }
+        .image {
+          display: inline-block;
+          position: relative;
+          width: 42px;
+          height: 42px;
+          vertical-align: top;
+          border: 2px solid #FFF;
+          border-radius: 100%;
+        }
+      }
+    }
+  }
+  @include sliderArrow();
+  @media all and (max-width: 767px) {
+    padding-bottom: 40px;
+    .item .image:before {
+      padding-top: 42.42%;
+    }
+    .bottom .description {
+      padding-bottom: 40px;
+    }
+    .block {
+      margin-bottom: 20px;
+      max-height: 375px;
+      &:before {
+        padding-top: 90%;
+      }
+    }
+    .mobile-slider {
+      padding-bottom: 80px;
+    }
+  }
+}

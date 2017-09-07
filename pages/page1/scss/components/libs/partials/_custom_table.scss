@@ -1,0 +1,452 @@
+table.custom-table {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-right: solid 1px lighten($grey-light-thin, 10%);
+  border-bottom: solid 1px lighten($grey-light-thin, 10%);
+  font-size: 0.9rem;
+  th, td {
+    padding: 10px 10px 10px 10px;
+    position: relative;
+    &:last-child {
+      padding-right: 10px;
+    }
+    @include respond-to(tablets-small) {
+      padding: 5px 5px 5px 5px;
+      font-size: 0.6rem;
+      &:last-child {
+        padding-right: 5px;
+      }
+    }
+  }
+  &.tiny {
+    font-size: 0.85rem;
+  }
+  .first-tr {
+    background: transparent;
+    &:hover {
+      background: transparent;
+    }
+    th, td {
+      background: transparent;
+      &:hover {
+        background: transparent;
+      }
+    }
+  }
+  &.vcenter-table {
+    td {
+      vertical-align: middle;
+    }
+  }
+  &.stripe-table {
+    border-left: solid 1px lighten($grey-light-thin, 10%);
+    th, td {
+      border-left: 0;
+      padding: 10px 0 10px 10px;
+      &:last-child {
+        padding-right: 10px;
+      }
+      @include respond-to(tablets-small) {
+        padding: 5px 0 5px 5px;
+        &:last-child {
+          padding-right: 5px;
+        }
+      }
+    }
+    tr {
+      &:first-of-type {
+        background: none;
+        &:hover {
+          background: none;
+        }
+      }
+      &:nth-child(2n) {
+        background: lighten($grey-light-thin, 18%);
+      }
+      &:hover {
+        background: rgba($blue, 0.12);
+      }
+    }
+
+    th, td {
+      border-left: solid 1px lighten($grey-light-thin, 10%);
+      border-top: solid 1px lighten($grey-light-thin, 10%);
+      padding: 10px;
+      @include respond-to(tablet-small) {
+        padding: 5px;
+        font-size: 0.8rem;
+      }
+    }
+  }
+  &.def-table {
+    border-bottom: 1px solid $grey-bg;
+    border-left: 1px solid $grey-bg;
+    line-height: normal;
+    text-align: left;
+    tr {
+      &:nth-child(2n) {
+        background: lighten($grey-light-thin, 18%);
+      }
+      &:hover {
+        background: transparent;
+        &:nth-child(2n) {
+          background: lighten($grey-light-thin, 18%);
+        }
+      }
+    }
+
+  }
+  &.def-table.striped,
+  &.def-table.striped th,
+  &.def-table.striped td {
+    border: none !important;
+  }
+  &.center-table {
+    text-align: center !important;
+  }
+  .icon-span {
+    margin-bottom: 8px;
+    display: block;
+    i {
+      font-size: 1.8rem;
+      @include respond-to(phones) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+  &.border-bottom {
+    border-bottom: 1px solid $grey-border;
+  }
+  &.border-top {
+    border-bottom: 1px solid $grey-border;
+  }
+  tr, td, th {
+    border-collapse: collapse;
+    border-spacing: 0;
+    line-height: normal;
+  }
+  &.hover-table {
+    tr {
+      &:hover {
+        background: rgba($blue, 0.12);
+      }
+      &:first-of-type {
+        &:hover {
+          background: transparent;
+        }
+      }
+      &.details {
+        background: transparent;
+      }
+    }
+  }
+}
+
+.custom-table.first-table {
+  tr {
+    background: $white;
+    td, th {
+      background: transparent;
+      text-align: center;
+    }
+    &:hover {
+      background: $white;
+    }
+  }
+}
+
+.no-border {
+  border: none !important;
+  th, td {
+    border: none;
+  }
+}
+
+.last-row {
+  td {
+    border-bottom: none !important;
+  }
+}
+
+.last-row-top {
+  td {
+    border-top: 1px solid lighten($grey-light-thin, 10%) !important;
+  }
+}
+
+.quotes {
+  i {
+    margin-right: 6px;
+  }
+}
+
+.hidden-section {
+  table.custom-table {
+    tr {
+      background: $white;
+      &:hover {
+        background: $sky-light;
+      }
+    }
+    .tooltips-hidden-block {
+      background: $blue-light;
+      &:hover {
+        background: $blue-light;
+      }
+    }
+    tr {
+      &:first-of-type {
+        background: $white;
+        &:hover {
+          background: $sky-light;
+        }
+      }
+    }
+  }
+}
+
+.table-responsive {
+  border: none;
+  margin-bottom: 0px;
+  table {
+    th, td {
+      @include respond-to(tablets-small) {
+        padding: 10px;
+        font-size: inherit;
+      }
+    }
+  }
+}
+
+.sign-green, .sign-red {
+  font-size: 1rem;
+  line-height: 1;
+  vertical-align: center;
+  @include respond-to(tablets-small) {
+    font-size: 0.85rem !important;
+  }
+}
+
+.sign-green {
+  color: $green;
+}
+
+.sign-red {
+  color: $red;
+}
+
+.tleft {
+  text-align: left;
+}
+
+.leverage {
+  position: relative;
+}
+
+tr {
+  &:first-of-type {
+    background: none;
+    &:hover {
+      background: none;
+    }
+  }
+}
+
+th, td {
+  border-left: solid 1px lighten($grey-light-thin, 10%);
+  border-top: solid 1px lighten($grey-light-thin, 10%);
+  padding: 10px;
+  @include respond-to(tablet-small) {
+    padding: 5px;
+    font-size: 0.8rem;
+  }
+}
+
+th {
+  color: #333;
+}
+
+#date-picker-wrapper {
+  .left {
+    border-radius: 3px 0 0 3px;
+  }
+  .right {
+    border-radius: 0 3px 3px 0;
+    border-left: none;
+  }
+  .custom-left {
+    padding-left: 0 !important
+  }
+  .custom-right {
+    padding-right: 0 !important
+  }
+}
+
+
+
+
+
+.custom-table {
+  table {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-right: solid 1px lighten($grey-light-thin, 10%);
+    border-bottom: solid 1px lighten($grey-light-thin, 10%);
+    font-size: 0.9rem;
+  }
+  th, td {
+    padding: 10px 10px 10px 10px;
+    position: relative;
+    &:last-child {
+      padding-right: 10px;
+    }
+    @include respond-to(tablets-small) {
+      padding: 5px 5px 5px 5px;
+      font-size: 0.6rem;
+      &:last-child {
+        padding-right: 5px;
+      }
+    }
+  }
+  .tiny {
+    font-size: 0.85rem;
+  }
+  .first-tr {
+    background: transparent;
+    &:hover {
+      background: transparent;
+    }
+    th, td {
+      background: transparent;
+      &:hover {
+        background: transparent;
+      }
+    }
+  }
+  .vcenter-table {
+    td {
+      vertical-align: middle;
+    }
+  }
+  .stripe-table {
+    border-left: solid 1px lighten($grey-light-thin, 10%);
+    th, td {
+      border-left: 0;
+      padding: 10px 0 10px 10px;
+      &:last-child {
+        padding-right: 10px;
+      }
+      @include respond-to(tablets-small) {
+        padding: 5px 0 5px 5px;
+        &:last-child {
+          padding-right: 5px;
+        }
+      }
+    }
+    tr {
+      &:first-of-type {
+        background: none;
+        &:hover {
+          background: none;
+        }
+      }
+      &:nth-child(2n) {
+        background: lighten($grey-light-thin, 18%);
+      }
+      &:hover {
+        background: rgba($blue, 0.12);
+      }
+    }
+
+    th, td {
+      border-left: solid 1px lighten($grey-light-thin, 10%);
+      border-top: solid 1px lighten($grey-light-thin, 10%);
+      padding: 10px;
+      @include respond-to(tablet-small) {
+        padding: 5px;
+        font-size: 0.8rem;
+      }
+    }
+  }
+  .def-table {
+    border-bottom: 1px solid $grey-bg;
+    border-left: 1px solid $grey-bg;
+    line-height: normal;
+    text-align: left;
+    tr {
+      &:nth-child(2n) {
+        background: lighten($grey-light-thin, 18%);
+      }
+      &:hover {
+        background: transparent;
+        &:nth-child(2n) {
+          background: lighten($grey-light-thin, 18%);
+        }
+      }
+    }
+
+  }
+  .def-table.striped,
+  .def-table.striped th,
+  .def-table.striped td {
+    border: none !important;
+  }
+  .center-table {
+    text-align: center;
+  }
+  .icon-span {
+    margin-bottom: 8px;
+    display: block;
+    i {
+      font-size: 1.8rem;
+      @include respond-to(phones) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+  .border-bottom {
+    border-bottom: 1px solid $grey-border;
+  }
+  .border-top {
+    border-bottom: 1px solid $grey-border;
+  }
+  tr, td, th {
+    border-collapse: collapse;
+    border-spacing: 0;
+    line-height: normal;
+  }
+  .hover-table {
+    tr {
+      &:hover {
+        background: rgba($blue, 0.12);
+      }
+      &:first-of-type {
+        &:hover {
+          background: transparent;
+        }
+      }
+      &.details {
+        background: transparent;
+      }
+    }
+  }
+}
+.post {
+  table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    td, th {
+      border: solid 1px lighten($grey-light-thin, 10%) !important;
+    }
+  }
+}
+
+
+
+

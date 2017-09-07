@@ -1,0 +1,75 @@
+.browser {
+  width: 100%;
+  border-radius: 3px;
+  text-align: center;
+  padding: 35px 10px 10px;
+  position: relative;
+  background: url(../../images/png/windows-action-btn.png) right 10px top 0px no-repeat #6dace3;
+  .browser-title {
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 100%;
+  }
+  &.browser-chrome {
+    background: none;
+    padding: 0;
+    .browser-header {
+      background-color: #dcdfe2;
+      @include border-top-radius(6px);
+      height: 45px;
+      padding: 10px;
+      padding-left: 67px;
+    }
+    .browser-title {
+      height: 25px;
+      top: 0;
+      position: relative !important;
+      font-size: 12px;
+      background-color: #fff;
+      text-align: left;
+      padding: 0 5px;
+      line-height: 26px;
+      color: #C6C6C6;
+      @include border-top-radius(2px);
+      @include border-bottom-radius(2px);
+    }
+    .action-button {
+      position: absolute;
+      left: 10px;
+      top: 16px;
+      width: 12px;
+      height: 12px;
+      background-color: #f06063;
+      @include border-top-radius(50px);
+      @include border-bottom-radius(50px);
+      &:before {
+        content: "";
+        position: absolute;
+        left: 17px;
+        top: 0;
+        width: 12px;
+        height: 12px;
+        background-color: #decc3c;
+        @include border-top-radius(50px);
+        @include border-bottom-radius(50px);
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        left: 34px;
+        top: 0;
+        width: 12px;
+        height: 12px;
+        background-color: #94c976;
+        @include border-top-radius(50px);
+        @include border-bottom-radius(50px);
+      }
+    }
+  }
+  img {
+    display: block;
+    width: 100%;
+    border: 0;
+  }
+}

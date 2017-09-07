@@ -1,0 +1,29 @@
+.region-dropdown {
+	padding: 30px;
+}
+
+.dropdown-header-lang {
+  z-index: 9999;
+  margin-right: 10px;
+  .row {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  a {
+    small {
+      color: $grey;
+    }
+  }
+  .dropdown-menu {
+    min-width: 500px;
+  }
+  .caret {
+    margin-left: 5px;
+    margin-top: -3px;
+  }
+  .flag {
+    margin-right: 5px;
+  }
+}

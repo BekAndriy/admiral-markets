@@ -1,0 +1,503 @@
+.bs-select-hidden {
+    display:none;
+}
+
+form {
+  border-radius: 4px;
+  padding: 20px;
+  margin: 0 0 30px;
+  position: relative;
+  @include respond-to(phones) {
+    padding: 20px 15px;
+  }
+  .custom-btn.btn-block {
+    margin-bottom: 0;
+  }
+  fieldset {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  &.dark-form {
+    background: lighten($grey-light-thin, 20%);
+  }
+  &.no-side-paddings {
+    padding: 20px 0;
+  }
+  .bootstrap-select {
+    .dropdown-menu {
+      li {
+        margin: 0;
+      }
+    }
+  }
+  legend {
+    border: none;
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: 600;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  .form-group {
+    margin-bottom: 15px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  .checkbox, .radio {
+    margin: 0 0 12px 0;
+    &:last-of-type {
+      margin: 0;
+    }
+    label {
+      line-height: 100%;
+    }
+    input {
+      margin: 0;
+    }
+  }
+  &.colored-form {
+    border: solid 2px rgba(0, 0, 0, 0.07);
+  }
+  &.yellow-bg {
+    @extend .yellow-bg;
+    @extend .colored-form;
+  }
+  &.warning-bg {
+    @extend .warning-bg;
+    @extend .colored-form;
+  }
+  &.success-bg {
+    @extend .success-bg;
+    @extend .colored-form;
+  }
+  &.danger-bg {
+    @extend .danger-bg;
+    @extend .colored-form;
+  }
+  &.info-bg {
+    @extend .info-bg;
+    @extend .colored-form;
+  }
+  &.top-line-form {
+    &:before {
+      background: none repeat scroll 0 0 $blue;
+      border-radius: 6px 6px 0 0;
+      content: "";
+      display: block;
+      height: 5px;
+      left: -2px;
+      position: absolute;
+      top: -2px;
+      width: 101%;
+      z-index: 10;
+    }
+    &.white-line {
+      &:before {
+        background: $white;
+      }
+    }
+    &.grey-dark-line {
+      &:before {
+        background: $grey-dark-bg;
+      }
+    }
+    &.grey-line {
+      &:before {
+        background: $grey-bg;
+      }
+    }
+    &.info-line {
+      &:before {
+        background: $dark-blue;
+      }
+    }
+    &.danger-line {
+      &:before {
+        background: $red;
+      }
+    }
+    &.success-line {
+      &:before {
+        background: $green;
+      }
+    }
+    &.warning-line {
+      &:before {
+        background: $yellow;
+      }
+    }
+  }
+}
+
+input, select, textarea, .bootstrap-select.open .dropdown-toggle, .bootstrap-select .dropdown-toggle {
+  &:focus, &:visited, &:active {
+    box-shadow: none !important;
+  }
+}
+
+.popover-wrapper {
+  @include respond-to(tablets-large) {
+    display: none;
+  }
+  .popover {
+    width: 100%;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    z-index: 1;
+  }
+  .popover-content, .tooltip-inner {
+    color: $white;
+    font-size: 0.9rem;
+  }
+  .tooltip-inner {
+    font-size: inherit;
+    background: inherit;
+    max-width: inherit;
+  }
+}
+
+.popover.tooltips-blue-bg {
+  background: $blue;
+  .arrow {
+    &:after {
+      border-right-color: $blue;
+      border-left-color: $blue;
+    }
+  }
+}
+
+.popover.tooltips-grey-dark-bg {
+  background: $grey-dark-bg;
+  .arrow {
+    &:after {
+      border-right-color: $grey-dark-bg;
+      border-left-color: $grey-dark-bg;
+    }
+  }
+}
+
+.popover.tooltips-grey-bg {
+  background: $grey-bg;
+  .arrow {
+    &:after {
+      border-right-color: $grey-bg;
+      border-left-color: $grey-bg;
+    }
+  }
+}
+
+.popover.tooltips-info-bg {
+  background: $dark-blue;
+  .arrow {
+    &:after {
+      border-right-color: $dark-blue;
+      border-left-color: $dark-blue;
+    }
+  }
+}
+
+.popover.tooltips-danger-bg {
+  background: $red;
+  .arrow {
+    &:after {
+      border-right-color: $red;
+      border-left-color: $red;
+    }
+  }
+}
+
+.popover.tooltips-success-bg {
+  background: $green;
+  .arrow {
+    &:after {
+      border-right-color: $green;
+      border-left-color: $green;
+    }
+  }
+}
+
+.popover.tooltips-warning-bg {
+  background: $yellow;
+  .arrow {
+    &:after {
+      border-right-color: $yellow;
+      border-left-color: $yellow;
+    }
+  }
+}
+
+.popover.tooltips-top-danger-bg {
+  background: $red;
+  .arrow {
+    &:after {
+      border-top-color: $red;
+    }
+  }
+}
+
+.popover.tooltips-top-black-bg {
+  background: #000;
+  .arrow {
+    &:after {
+      border-top-color: #000;
+    }
+  }
+}
+
+label {
+  @include respond-to(phones) {
+    font-size: 0.8rem;
+  }
+}
+
+.column-form {
+  label {
+    line-height: 44px;
+    @include respond-to(phones) {
+      line-height: 100%;
+    }
+  }
+}
+
+form.white {
+  background: #fff;
+  border: solid 2px lighten($grey-light-thin, 12%);
+}
+
+form.no-border {
+  border: 0;
+}
+
+input.custom-form-control {
+  border: none;
+  box-shadow: none;
+  height: 44px;
+  &:focus {
+    border: none;
+    box-shadow: none;
+  }
+}
+
+input.form-control {
+  box-shadow: none;
+  height: 44px;
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.bootstrap-select {
+  .btn {
+    height: 44px;
+    &:focus {
+      outline: none !important;
+      background: $white;
+    }
+    &:active {
+      background: $white;
+    }
+  }
+}
+
+select {
+  display: none;
+}
+
+textarea {
+  height: auto;
+  min-height: 120px;
+  cursor: auto;
+  resize: none;
+  box-shadow: none !important;
+}
+
+button[disabled], html input[disabled] {
+  cursor: not-allowed
+}
+
+.disabled-input {
+  cursor: not-allowed;
+  background: lighten($grey-light-thin, 20%) !important;
+  &:focus {
+    border-color: lighten($grey-light-thin, 12%) !important;
+  }
+}
+
+label[for='error'] {
+  color: $red;
+}
+
+.error-input {
+  border-color: $red !important;
+}
+
+label[for='success'] {
+  color: $green;
+}
+
+.success-input {
+  border-color: $green !important;
+}
+
+/*Custom checkbox*/
+.custom-checkbox-box {
+  position: relative;
+  label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    line-height: 1 !important;
+  }
+  label:before, label:after {
+    font-family: FontAwesome;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include respond-to(phones) {
+      font-size: 16px;
+    }
+  }
+  label:before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-color: $white;
+    border: solid 1px $grey-light-thin;
+    position: absolute;
+    left: 0;
+    top: -2px;
+    border-radius: 3px;
+  }
+  label:after {
+    content: "\f00c";
+    max-width: 0;
+    overflow: hidden;
+    font-size: 11px !important;
+    opacity: 0.5;
+    @include transition(all 0.2s ease-in-out);
+    // @include transform(rotate(-14deg));
+    color: $blue;
+    position: absolute;
+    left: 4px;
+    top: 2px;
+  }
+  input[type="checkbox"] {
+    display: none;
+  }
+  input[type="checkbox"]:checked + label:after {
+    max-width: 25px;
+    opacity: 1;
+  }
+}
+
+/*Custom radio*/
+.custom-radio {
+  position: relative;
+  label {
+    position: relative;
+    padding: 0;
+    padding-left: 30px;
+    cursor: pointer;
+    line-height: 1.3rem !important;
+  }
+  /*noinspection CssNoGenericFontName*/
+  label:before, label:after {
+    font-family: FontAwesome;
+    font-size: 21px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*noinspection SassScssResolvedByNameOnly*/
+    @include respond-to(phones) {
+      font-size: 16px;
+    }
+  }
+  label:before {
+    content: ""; /*unchecked*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: solid 1px $grey-light-thin;
+    border-radius: 50px;
+    background-color: $white;
+  }
+  label:after {
+    content: ""; /*checked*/
+    overflow: hidden;
+    opacity: 0;
+    @include transition(all 0.2s ease-in-out);
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    background-color: $blue;
+  }
+  input[type="radio"] {
+    display: none;
+  }
+  input[type="radio"]:checked + label:after {
+    opacity: 1;
+  }
+}
+
+.search-group {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  input {
+    padding-right: 40px;
+    position: relative;
+  }
+  button {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    height: 42px;
+    max-width: 35px;
+    width: 100%;
+    border-radius: 0 4px 4px 0;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    padding: 0;
+    i {
+      vertical-align: top;
+    }
+  }
+}
+
+.no-margin {
+  margin-bottom: 0 !important;
+}
+
+.form-group-search {
+  position: relative;
+  display: inline-block;
+}
+
+.search-form {
+  padding: 0;
+  margin: 0;
+  display: none;
+  button {
+    background: transparent;
+    border: 0;
+    i {
+      color: #000;
+    }
+    &:hover, &:active {
+      background: transparent;
+      i {
+        color: #000;
+      }
+    }
+  }
+}

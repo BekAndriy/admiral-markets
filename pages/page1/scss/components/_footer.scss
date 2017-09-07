@@ -1,0 +1,168 @@
+footer {
+  padding-top: 80px;
+  background-color: #FFF;
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-bottom: 40px;
+  }
+  .grid-cell {
+    width: 16.6%;
+  }
+  .grid-cell > span {
+    color: #424559;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 19px;
+    padding-bottom: 20px;
+    display: block;
+  }
+  .grid-cell li {
+    margin: 0;
+  }
+  .grid-cell a {
+    color: #8B8EA7;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 24px;
+    transition: all .2s;
+    &:hover {
+      text-decoration: underline;
+      color: #424559;
+    }
+  }
+  .risk-warning {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #F1F2F4;
+    border-top: 1px solid #F1F2F4;
+    p {
+      color: #8B8EA7;
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 22px;
+      span {
+        font-weight: 500;
+      }
+    }
+  }
+  .admiral-markets {
+    color: #8B8EA7;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .forex-wrapper {
+    background-color: #424559;
+    padding: 16px 0;
+    margin-bottom: 3px;
+    margin-top: 80px;
+    .forex {
+      color: rgba(255, 255, 255, 0.7);
+      font-family: Roboto;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      display: block;
+      a {
+        text-decoration: underline;
+        color: #FFF;
+        display: inline;
+      }
+    }
+  }
+  .follow-us {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .social-l a {
+    background-color: #F5F5F7;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    transition: all .3s;
+    margin-left: 10px;
+    b {
+      font-size: 16px;
+      line-height: 40px;
+      text-align: center;
+      display: block;
+      color: #6A6D81;
+      transition: all .3s;
+    }
+    &:hover {
+      background-color: #3B5998;
+      b {
+        color: #FFFFFF;
+      }
+    }
+  }
+  @media all and (max-width: 767px) {
+    padding-top: 10px;
+    .grid {
+      display: block;
+      padding-bottom: 20px;
+      .grid-cell {
+        width: inherit;
+        display: block;
+        & > span {
+          text-align: left;
+          padding: 20px 0;
+          text-transform: uppercase;
+        }
+        a {
+          display: block;
+          text-align: left;
+        }
+      }
+    }
+    .risk-warning {
+      padding: 20px 0;
+      margin-bottom: 20px;
+      p {
+        line-height: 18px;
+        font-size: 12px;
+        text-align: left;
+      }
+    }
+    .admiral-markets {
+      font-size: 12px;
+      line-height: 18px;
+      text-align: left;
+      position: relative;
+    }
+    .admiral-markets:after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+      height: 1px;
+      background: #F1F2F4;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      position: relative;
+
+    }
+    .social-l {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      a {
+        margin: 0 5px;
+      }
+    }
+    .forex-wrapper {
+      margin-top: 30px;
+      .forex {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+  }
+}

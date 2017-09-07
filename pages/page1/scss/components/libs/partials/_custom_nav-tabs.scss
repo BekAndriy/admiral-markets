@@ -1,0 +1,217 @@
+.nav-tabs {
+  padding: 0;
+  margin: 0 0 -2px 0;
+  list-style: none;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 100;
+  &.indent {
+    margin-bottom: 20px;
+  }
+  li {
+    transition: none;
+    padding: 0;
+    margin: 0 2px 0 0;
+    list-style: none;
+    -webkit-flex: 1;
+    flex: 1;
+    text-align: center;
+    &:before {
+      content: none;
+    }
+    &:last-of-type {
+      margin-right: 0;
+      a {
+        margin-right: 0;
+      }
+    }
+  }
+  a {
+    transition: none;
+    display: block;
+    padding: 10px 0;
+    line-height: normal;
+    border-radius: 4px 4px 0 0;
+    &:hover {
+      background: lighten($grey-light-thin, 18%);
+      text-decoration: none;
+    }
+    @include respond-to(phones) {
+      font-size: 0.85rem;
+      padding: 5px 0;
+    }
+  }
+  .active a {
+    background: #fff;
+    color: #333;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    border-bottom: 0;
+    margin-bottom: -1px;
+    margin-right: 0;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &.fancy-tab {
+    border-bottom: solid 2px $blue;
+    .active a {
+      color: #fff;
+      background: $blue;
+      border-color: $blue;
+      border-bottom: 2px solid $blue;
+      &:hover {
+        background: $blue;
+        color: $white;
+        border-color: $blue;
+      }
+      &:focus {
+        background: $blue;
+        color: $white;
+        border-color: $blue;
+      }
+    }
+  }
+  &.thick-tabs {
+    border: none;
+    margin: 0 0 -2px 0;
+    .active {
+      a {
+        border: solid 2px rgba(0, 0, 0, 0.1);
+        border-bottom: none;
+        margin: 0;
+        padding: 10px 0;
+        height: 43px;
+        &:hover {
+          border: solid 2px rgba(0, 0, 0, 0.1);
+          border-bottom: none;
+        }
+        &:focus {
+          border: solid 2px rgba(0, 0, 0, 0.1);
+          border-bottom: none;
+        }
+        @include respond-to(phones) {
+          padding: 8px 0;
+        }
+      }
+    }
+    li {
+      margin-right: 8px;
+      &:last-of-type {
+        margin-right: 0;
+      }
+      a {
+        color: $dark-text;
+        font-weight: $fonts-semibold;
+        margin-right: 0;
+        border: solid 2px rgba(0, 0, 0, 0.1);
+        border-bottom: transparent;
+        &:hover {
+          background: $white;
+        }
+        @include respond-to(phones) {
+          padding: 7px 0;
+        }
+      }
+    }
+  }
+  &.vertical-tabs {
+    display: block;
+    border: 2px solid $grey-border;
+    border-radius: 0;
+    border-right: none;
+    margin-right: -2px;
+    @include clearfix;
+    @include respond-to(phones) {
+      margin-right: 0;
+      display: table;
+      width: 100%;
+      border-bottom: none;
+    }
+    li {
+      float: none;
+      text-align: left;
+      margin: 0;
+      border-bottom: 2px solid $grey-border;
+      &:last-of-type {
+        border-bottom: none;
+      }
+      @include respond-to(phones) {
+        display: table-cell;
+        text-align: center;
+        &:last-of-type {
+          border-bottom: 2px solid $grey-border;
+        }
+      }
+      a {
+        border-radius: 0;
+        padding: 20px;
+        color: $dark-text;
+        font-weight: $fonts-semibold;
+        border: none;
+        border-right: 2px solid $grey-border;
+        margin: 0;
+        position: relative;
+        background: $grey-thin;
+        &:hover {
+          border: none;
+          border-bottom: none;
+          border-right: 2px solid $grey-border;
+          color: lighten($dark-text, 30%);
+          background: lighten($grey-thin, 1%);
+        }
+        @include respond-to(phones) {
+          padding: 15px;
+        }
+      }
+    }
+    .active {
+      @include respond-to(phones) {
+        border-bottom: none;
+        &:last-of-type {
+          border-bottom: none;
+        }
+      }
+      a {
+        background: $white;
+        color: lighten($dark-text, 30%);
+        border: none;
+        &:hover {
+          border: none;
+          background: $white;
+          color: lighten($dark-text, 30%);
+        }
+        &:focus {
+          border: none;
+        }
+        &:after {
+          @include respond-to(phones) {
+            background: none repeat scroll 0 0 $white;
+            content: '';
+            height: 2px;
+            left: -0%;
+            position: absolute;
+            bottom: -2px;
+            width: 100%;
+            z-index: 10;
+          }
+        }
+        @include respond-to(phones) {
+          border-right: 2px solid $grey-border;
+          border-bottom: 2px solid $grey-border;
+          &:hover {
+            border-right: 2px solid $grey-border;
+            border-bottom: 2px solid $grey-border;
+          }
+          &:focus {
+            border-right: 2px solid $grey-border;
+            border-bottom: 2px solid $grey-border;
+          }
+        }
+      }
+    }
+  }
+}
+

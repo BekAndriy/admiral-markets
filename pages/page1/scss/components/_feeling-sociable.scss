@@ -1,0 +1,31 @@
+.feeling-sociable {
+  padding: 80px 0;
+  .head {
+    * {
+      font-family: Roboto;
+      font-size: 16px;
+      text-align: center;
+    }
+    .title {
+      color: #2072E1;
+      font-weight: 500;
+      letter-spacing: 1px;
+      line-height: 19px;
+      text-transform: uppercase;
+    }
+    .description {
+      color: #8B8EA8;
+      line-height: 26px;
+      padding: 20px 0 60px;
+    }
+  }
+  .frame-block {
+    overflow: hidden;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.04);
+  }
+  @media all and (max-width: 767px) {
+    display: none;
+  }
+}

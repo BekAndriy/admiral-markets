@@ -1,0 +1,24 @@
+#calcContainer {
+	position: relative;
+	.column-form {
+		label {
+			line-height: normal;
+			font-size: 0.8em;
+		}
+	}    
+	.loading {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background-color: #fff;
+		z-index: 1;
+		opacity: 0.9;
+		i {
+			position: absolute;
+			left: 48%;
+			top: 20%;
+			font-size: 4em;
+			font-weight: normal;
+		}
+	}
+}

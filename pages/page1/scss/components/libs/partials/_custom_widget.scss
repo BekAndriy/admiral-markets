@@ -1,0 +1,131 @@
+/*widget*/
+.widget-box {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.65);
+  border-radius: 6px;
+  line-height: 1;
+  overflow: hidden;
+  table {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-right: 0;
+    border-bottom: 0;
+  }
+  tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    position: relative;
+    height: 40px;
+  }
+  th, td {
+    border: none;
+  }
+  td, th {
+    font-weight: normal;
+    padding: 15px 20px;
+    text-align: center;
+    width: 25%;
+  }
+  td {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  th {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  tr {
+    &:first-child {
+      &:hover {
+        background: none repeat scroll 0 0 rgba(0, 0, 0, 0.44);
+      }
+    }
+  }
+  tr:nth-child(2n) {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.65);
+  }
+  tr {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.44);
+  }
+}
+
+.custom-table-hover {
+  cursor: pointer;
+  @include transition(all 0.2s);
+  &:hover {
+    background-color: $blue !important;
+  }
+}
+
+@mixin animated-bg {
+  border-radius: 2px;
+  display: inline-block;
+  margin: -3px;
+  padding: 3px;
+  vertical-align: initial;
+}
+
+span.success-bg.animated {
+  @include animated-bg;
+  @include animation(green 1.5s normal forwards ease-in-out);
+}
+
+span.danger-bg.animated {
+  @include animated-bg;
+  @include animation(red 1.5s normal forwards ease-in-out);
+}
+
+span.success-bg-lighten.animated {
+  @include animated-bg;
+  @include animation(green-lighten 1.5s normal forwards ease-in-out);
+}
+
+span.danger-bg-lighten.animated {
+  @include animated-bg;
+  @include animation(red-lighten 1.5s normal forwards ease-in-out);
+}
+
+@include keyframes(green) {
+  0% {
+    background: #00ad68;
+  }
+  20% {
+    background: #00ad68;
+  }
+  100% {
+    background: none;
+  }
+}
+
+@include keyframes(red) {
+  0% {
+    background: #d12c34;
+  }
+  20% {
+    background: #d12c34;
+  }
+  100% {
+    background: none;
+  }
+}
+
+@include keyframes(green-lighten) {
+  0% {
+    background: transparentize(#00ad68, 0.5);
+  }
+  20% {
+    background: transparentize(#00ad68, 0.5);
+  }
+  100% {
+    background: none;
+  }
+}
+
+@include keyframes(red-lighten) {
+  0% {
+    background: transparentize(#d12c34, 0.5);
+  }
+  20% {
+    background: transparentize(#d12c34, 0.5);
+  }
+  100% {
+    background: none;
+  }
+}

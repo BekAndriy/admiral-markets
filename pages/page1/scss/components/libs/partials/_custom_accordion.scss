@@ -1,0 +1,239 @@
+.custom-accordion {
+  border-bottom: 1px solid $grey-border;
+  table.custom-table {
+    border: none;
+  }
+  &.td-equal {
+    td {
+      width: 25%;
+    }
+  }
+  tr {
+    background-color: $white;
+    &:hover {
+      background: $sky-light;
+    }
+  }
+  .first-table {
+    border-top: solid 1px $grey-border !important;
+    border-left: solid 1px $grey-border !important;
+    border-right: solid 1px $grey-border !important;
+    tr {
+      th {
+        border-top: none;
+      }
+    }
+  }
+  th, td {
+    position: relative;
+    overflow: hidden;
+    width: 25%;
+    &:first-child {
+      border-left: none;
+    }
+    &:last-child {
+      border-right: none;
+    }
+    &.desc {
+      width: 40%;
+    }
+    @include respond-to(phones) {
+      width: auto;
+    }
+  }
+  td {
+    &:first-child {
+      text-align: left;
+    }
+  }
+  .panel-label {
+    padding: 4px 0;
+    top: 20px;
+    right: -56px;
+    @include respond-to(tablets-small) {
+      font-size: 0.6rem;
+      top: 12px;
+      right: -70px;
+    }
+    @include respond-to(phones) {
+      padding: 0;
+      font-size: 0.4rem;
+    }
+    @include respond-to(phones-small) {
+      padding: 0;
+      font-size: 0.4rem;
+      top: 6px;
+      right: -76px;
+    }
+  }
+  .hidden-section {
+    border-left: solid 1px $grey-border;
+    border-right: solid 1px $grey-border;
+    .custom-btn {
+      float: right;
+    }
+    h5 {
+      display: block;
+      padding-top: 15px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-top: solid 1px $grey-border;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.trigger-table {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.trigger-table,
+.trigger-table-sub-accordion {
+  @include no-selection;
+  @include clearfix;
+  display: block;
+  background: $blue;
+  padding: 14px 12px;
+  position: relative;
+  color: $white;
+  font-weight: $fonts-semibold;
+  line-height: 25px;
+  &:hover {
+    background: darken($blue, 5%);
+    color: $white;
+    span {
+      border: 1px solid rgba(228, 229, 230, .6);
+    }
+  }
+  span {
+    float: right;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid $white;
+    font-size: 16px;
+    i {
+      line-height: 1;
+      display: block;
+      margin-top: 3px;
+      margin-left: 1px;
+      @include transition(350ms);
+    }
+  }
+}
+
+.trigger-table-sub-accordion {
+  background: $white;
+  color: $blue;
+  border-top: 1px solid $grey-border;
+  &:hover {
+    background: $white;
+    color: lighten($blue, 15%);
+  }
+  span {
+    border: 1px solid $grey-border;
+  }
+  .number-counter {
+    box-shadow: none;
+    border: 1px solid $grey-border;
+    line-height: 1.35rem !important;
+  }
+}
+
+.trigger-table.active,
+.trigger-table-sub-accordion.active {
+  span {
+    i {
+      margin-top: 2px;
+      &:before {
+        font-family: 'FontAwesome';
+        content: '\f106';
+      }
+    }
+  }
+}
+
+.trigger-tooltip, .tab-trigger-tooltip {
+  display: inline-block;
+  height: 22px;
+  width: 22px;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+  background: $white;
+  float: right;
+  color: $blue;
+  line-height: 22px;
+  @include no-selection;
+  @include respond-to(phones-small) {
+    height: 16px;
+    width: 16px;
+    line-height: 16px;
+  }
+  &:hover {
+    background: $blue-light;
+    color: $white;
+  }
+}
+
+.trigger-tooltip.arrow.active, .tab-trigger-tooltip.arrow.active {
+  &:before {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5px 5px 5px;
+    border-color: transparent transparent $blue-light transparent;
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    right: 18px;
+    z-index: 100;
+  }
+}
+
+.tooltips-hidden-block,
+.tooltip-arrow {
+  display: none;
+  @include transition(150ms);
+}
+
+.tooltips-hidden-block {
+  td {
+    border: none;
+    background: $blue-light;
+    color: $white;
+    font-size: 1rem;
+  }
+  &:hover {
+    td {
+      background: $blue-light !important;
+    }
+  }
+}
+
+.trigger-table-icons {
+  color: $yellow;
+  margin-right: 8px;
+}
+
+.number-counter {
+  height: 22px;
+  width: 22px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid $white;
+  vertical-align: middle;
+  margin-left: 8px;
+  font-size: 0.7rem;
+  text-align: center;
+  line-height: 1.35rem;
+
+  @include respond-to(phones-small) {
+    font-size: 0.5rem;
+  }
+}

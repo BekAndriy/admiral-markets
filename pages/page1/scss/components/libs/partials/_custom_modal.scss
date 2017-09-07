@@ -1,0 +1,180 @@
+//Custom modal 
+
+#login-modal {
+  .modal-dialog {
+    margin-top: 75px;
+  }
+  .close {
+    opacity: 1;
+    font-weight: normal;
+    &:before {
+      font-family: 'FontAwesome';
+      content: '\f00d';
+      font-size: 1.2rem;
+      color: $grey;
+    }
+  }
+  .modal-header,
+  .modal-footer {
+    border: none;
+  }
+  form {
+    padding: 0;
+    margin-bottom: 0;
+  }
+  button {
+    margin-bottom: 0;
+  }
+}
+
+.modal.modal__new-design {
+  .close {
+    //display: none;
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    color: #fff;
+    opacity: .9;
+    font-size: 2rem;
+    height: 60px;
+    width: 60px;
+    z-index: 10000;
+    @include respond-to(phones) {
+      //display: block;
+      height: 30px;
+      width: 30px;
+      z-index: 10000;
+      position: absolute;
+      right: 0;
+      top: 0;
+      img {
+        height: 30px;
+        width: 30px;
+      }
+    }
+  }
+  .modal-dialog {
+    margin-top: 150px;
+    @include respond-to(phones) {
+      margin-top: 15px;
+    }
+    .m-t-xs-0 {
+      @include respond-to(phones) {
+        margin-top: 0 !important;
+      }
+    }
+    .flex-row {
+      display: flex;
+      flex-flow: row wrap;
+      @include respond-to(tablets-small) {
+        display: block;
+      }
+      & > [class*='col-'] {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include respond-to(tablets-small) {
+          display: block;
+        }
+      }
+    }
+    .modal-header {
+      border-bottom: none;
+    }
+    .modal-content {
+      .maintenance-ico {
+        text-align: center;
+        line-height: 80px;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        background-color: #3795ED;
+        box-shadow: 0 20px 30px 0 rgba(55,149,237,0.3);
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        margin-left: -40px;
+        svg {
+          vertical-align: middle;
+        }
+      }
+      .close-link {
+        font-size: 16px;
+        line-height: 22px;
+        text-decoration: underline;
+        color: #6A6D81;
+        background-color: transparent;
+        &:hover, &:active, &:focus {
+          text-decoration: none;
+        }
+      }
+      .btn-menu a {
+        width: 49%;
+        @include respond-to(phones) {
+          width: 100%;
+        }
+        &:first-child {
+          margin: 0 1% 1% 0;
+          @include respond-to(phones) {
+            margin: 0 0 10px 0;
+          }
+        }
+        &:last-child {
+          margin: 0 0 1% .3%;
+          @include respond-to(phones) {
+            margin: 0;
+          }
+        }
+      }
+    }
+    .book-cover-box {
+      padding: 30px;
+      position: relative;
+      z-index: 1;
+      /*&:before {
+        content: '';
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        right: 30px;
+        bottom: 30px;
+        //background-image: linear-gradient(to top, transparent 0%, #fff 100%);
+        z-index: 2;
+      }*/
+      &.label-free {
+        &:after {
+          content: 'free';
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: 3;
+          width: 100px;
+          height: 100px;
+          background-color: #2ecc71;
+          box-shadow: 0 20px 20px rgba(30, 26, 63, 0.15);
+          color: white;
+          font-size: 24px;
+          font-weight: 700;
+          text-transform: uppercase;
+          text-align: center;
+          line-height: 100px;
+          border-radius: 50%;
+        }
+      }
+      img {
+        width: 100%;
+        display: block;
+        box-shadow: 0 20px 40px rgba(15, 26, 52, 0.47);
+      }
+    }
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  /* Safari only override */
+  .modal.modal__new-design .modal-dialog .flex-row {
+    flex-flow: row nowrap;
+    @media screen and (max-width: 992px) {
+      flex-flow: row wrap;
+    }
+  }
+}

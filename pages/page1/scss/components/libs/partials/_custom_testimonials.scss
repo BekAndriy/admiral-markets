@@ -1,0 +1,162 @@
+//Custom testimonials
+.testimonials-items {
+  padding: 20px;
+  border: 1px solid $grey-border;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  display: inline-block;
+  .caption {
+    font-weight: $fonts-semibold;
+    margin-bottom: 6px;
+  }
+  span {
+    display: block;
+    margin-bottom: 20px;
+  }
+  .row {
+    margin-top: 0;
+  }
+}
+_:-ms-fullscreen, :root .testimonials-items {
+  display: block;
+  overflow: hidden;
+}
+
+.testimonials-content .desc {
+  min-height: 120px;
+}
+
+/*Testimonials interview*/
+.interview-testimonials-avatar {
+  img {
+    @include respond-to(phones) {
+      width: 140px;
+      height: 140px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.testimonials-header {
+  margin-bottom: 30px;
+  .caption {
+    margin-bottom: 0;
+  }
+  h5 {
+    margin-bottom: 20px;
+  }
+}
+
+.interview-list {
+  margin-bottom: 25px;
+  @include respond-to(phones) {
+    padding-left: 10px;
+  }
+  .items-text-box {
+    padding-left: 30px;
+    border-left: 1px solid $grey-border;
+    padding-bottom: 20px;
+    position: relative;
+    h4 {
+      font-weight: $fonts-semibold;
+      &:before {
+        background-color: #d72a34;
+        border-radius: 50%;
+        content: "";
+        height: 21px;
+        left: -11px;
+        position: absolute;
+        top: 0;
+        width: 21px;
+      }
+      &:after {
+        background-color: #fff;
+        border-radius: 50%;
+        content: "";
+        height: 13px;
+        left: -7px;
+        position: absolute;
+        top: 4px;
+        width: 13px;
+      }
+    }
+  }
+}
+
+.testimonials-profile-switch {
+  @include clearfix;
+  a {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: $grey-border;
+    border-image: none;
+    border-style: solid none solid solid;
+    border-width: 1px 0 1px 1px;
+    box-sizing: border-box;
+    color: $grey-caption;
+    width: 50%;
+    float: left;
+    font-size: 0.85rem;
+    height: 82px;
+    line-height: normal;
+    padding: 20px 20px 20px 82px;
+    position: relative;
+    text-align: left;
+    @include respond-to(phones-small) {
+      padding: 10px 5px 15px 20px;
+      height: 100%;
+    }
+    &:after {
+      content: "\f104";
+      font-family: 'FontAwesome';
+      font-size: 1.2rem;
+      left: 29px;
+      position: absolute;
+      top: 32px;
+      @include respond-to(phones-small) {
+        left: 5px;
+        top: 20px;
+      }
+    }
+    &:first-of-type {
+      @include respond-to(phones-small) {
+        border-right: 1px solid $grey-border;
+        border-bottom: none;
+      }
+    }
+    &:last-of-type {
+      border-right: 1px solid $grey-border;
+      padding: 20px 82px 20px 20px;
+      text-align: right;
+      @include respond-to(phones-small) {
+        padding: 10px 20px 15px 5px;
+      }
+      &:after {
+        content: "\f105";
+        font-family: 'FontAwesome';
+        right: 29px;
+        @include respond-to(phones-small) {
+          right: 5px;
+          top: 20px;
+        }
+      }
+    }
+    &:hover {
+      color: $grey-caption;
+      strong {
+        color: $dark-text;
+      }
+    }
+    @include respond-to(phones-small) {
+      width: 100%;
+    }
+  }
+  strong {
+    display: block;
+    font-weight: $fonts-semibold;
+    color: $blue;
+    font-size: 1.2rem;
+  }
+}

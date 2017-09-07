@@ -1,0 +1,399 @@
+.btn:not(.dropdown-toggle), .btn.btn-transparent-bordered, .rangeBtn, .btn-solid {
+  border-radius: 2rem;
+}
+_:-ms-fullscreen, :root .caption * {
+  margin-bottom: 0;
+}
+_:-ms-fullscreen, :root .hidden-print .btn > table td {
+  display: block;
+  width: 45%;
+}
+_:-ms-fullscreen, :root .hidden-print .btn > table td:last-child {
+  display: none;
+}
+_:-ms-fullscreen, :root .hidden-print .btn > table td svg {
+  float: none !important;
+}
+.custom-btn {
+  border-radius: 3px;
+  border-radius: 2rem;
+  box-shadow: none;
+  display: inline-block;
+  color: $white;
+  font-size: 1rem;
+  line-height: 1.1rem;
+  padding: 15px 17px;
+  background: $blue;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: $fonts-semibold;
+  @include respond-to(phones) {
+    font-size: 0.875rem;
+    line-height: 1.250rem;
+    padding: 12px 14px;
+  }
+  &:hover {
+    background: darken($blue, 10%);
+    color: $white;
+  }
+  &:focus {
+    outline: none;
+    color: $white;
+    background: darken($blue, 10%);
+  }
+  &.custom-btn-cancel {
+    background: $grey;
+    &:hover {
+      background: darken($grey, 5%);
+    }
+    &:focus {
+      background: darken($grey, 5%);
+    }
+  }
+  &.custom-btn-transparent-white {
+    color: #fff;
+    border-color: #fff;
+    &:hover {
+      color: rgba(255,255,255, 0.5);
+    }
+  }
+  &.custom-btn-transparent-blue {
+    color: #237dea;
+    border-color: #3795ed;
+    background-color: transparent;
+    &:hover {
+      opacity: .7;
+    }
+  }
+  &.custom-btn-app {
+    width: 110px;
+    height: 37px;
+    &.google-play {
+      width: 113px;
+      background: url('//fxmedia.s3.amazonaws.com/img/app-buttons.png') 0 0 no-repeat;
+      background-size: cover;
+      background-position: -130px 0;
+    }
+    &.app-store {
+      background: url('//fxmedia.s3.amazonaws.com/img/app-buttons.png') 0 0 no-repeat;
+      background-size: cover;
+    }
+  }
+  &.custom-btn-info {
+    background: $dark-blue;
+    &:hover {
+      background: darken($dark-blue, 5%);
+    }
+    &:focus {
+      background: darken($dark-blue, 5%);
+    }
+  }
+  &.custom-btn-success {
+    background: $green;
+    &:hover {
+      background: darken($green, 5%);
+    }
+    &:focus {
+      background: darken($green, 5%);
+    }
+  }
+  &.custom-btn-warning {
+    background: $yellow;
+    &:hover {
+      background: darken($yellow, 15%);
+    }
+    &:focus {
+      background: darken($yellow, 15%);
+    }
+  }
+  &.custom-btn-danger {
+    background: $red;
+    &:hover {
+      background: darken($red, 15%);
+    }
+    &:focus {
+      background: darken($red, 15%);
+    }
+  }
+  &.custom-btn-orange {
+    background-color: $orange;
+    &:hover {
+      background: darken($orange, 15%);
+    }
+    &:focus {
+      background: darken($orange, 15%);
+    }
+  }
+  &.custom-btn-ghost {
+    background: $white;
+    color: $body-text-color-lighten;
+    &:hover {
+      background: $white;
+      color: $body-text-color;
+    }
+    &:focus {
+      background: $white;
+      color: $body-text-color;
+    }
+  }
+  &.custom-btn-transparent {
+    background: transparent;
+    color: $body-text-color-lighten;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.2) inset;
+    &:hover {
+      color: $body-text-color;
+    }
+    &:focus {
+      color: $body-text-color;
+    }
+  }
+  &.custom-btn-transparent-white {
+    background: transparent;
+    color: $white;
+    box-shadow: 0 0 0px 1px rgba(255,255,255, 0.2) inset;
+    &:hover {
+      color: rgba(255,255,255, 0.8);
+    }
+    &:focus {
+      color: rgba(255,255,255, 0.8);
+    }
+  }
+  &.custom-btn-black {
+    background: #000;
+    &:hover {
+      background: darken(#000, 5%);
+    }
+    &:focus {
+      background: darken(#000, 5%);
+    }
+  }
+  &.btn-block {
+    width: 100%;
+    display: block;
+  }
+  &.custom-disabled-btn {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  &.icon-right {
+    i {
+      margin-left: 10px;
+    }
+  }
+  &.icon-left {
+    i {
+      margin-right: 10px;
+    }
+  }
+  &.btn-large, button.btn-large {
+    @include respond-to(phones) {
+      padding: 10px 16px;
+    }
+  }
+  &.btn-small, button.btn-small {
+    @include respond-to(phones) {
+      padding: 6px 8px;
+    }
+    @include respond-to(phones-small) {
+      font-size: 0.8rem;
+      padding: 4px 6px;
+    }
+  }
+  &.btn-mini, button.btn-mini {
+    @include respond-to(phones) {
+      padding: 4px 6px;
+    }
+  }
+}
+
+@include button-sizes('btn-large', 1.2rem, 18px 27px 18px 27px);
+@include button-sizes('btn-small', 1rem, 8px 10px 8px 10px);
+@include button-sizes('btn-mini', 0.65rem, 5px 7px 5px 7px);
+
+.button-group {
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  overflow: hidden;
+}
+
+.button-group {
+  a {
+    border-radius: 0;
+    -webkit-flex: 1;
+    flex: 1;
+  }
+}
+
+.button-group {
+  a {
+    &:first-of-type {
+      border-radius: 3px 0 0 3px;
+    }
+    &:last-of-type {
+      border-radius: 0 3px 3px 0;
+    }
+  }
+}
+
+// Progress Button
+.progress-btn {
+  position: relative;
+  overflow: hidden;
+  &:after {
+    content: "";
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 30px 30px;
+    @include background-image(linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
+    transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent));
+    @include animation(stripes-animation 0.8s infinite linear);
+  }
+  &.pointer-none {
+    pointer-events: none;
+  }
+}
+
+@include keyframes(stripes-animation) {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 60px 0;
+  }
+}
+
+.iconBg {
+  border-radius: 47px;
+  color: #fff;
+  display: inline-block;
+  font-size: 32px;
+  height: 55px;
+  line-height: 54px;
+  margin: 0 16px 0 0;
+  text-align: center;
+  vertical-align: middle;
+  width: 55px;
+  background: $blue;
+  &.white-bg {
+    background: $white;
+  }
+  &.grey-dark-bg {
+    @extend .grey-dark-bg;
+  }
+  &.grey-bg {
+    @extend .grey-bg;
+  }
+  &.info-bg {
+    @extend .info-bg;
+  }
+  &.danger-bg {
+    @extend .danger-bg;
+  }
+  &.success-bg {
+    @extend .success-bg;
+  }
+  &.warning-bg {
+    @extend .warning-bg;
+  }
+  &.orange-bg {
+    @extend .orange-bg;
+  }
+  &.green-light-dark-bg {
+    @extend .green-light-dark-bg;
+  }
+  &.deep-blue-bg {
+    @extend .deep-blue-bg;
+  }
+  &.sky-bg {
+    @extend .sky-bg;
+  }
+}
+
+.btn-link {
+  text-decoration: none !important;
+}
+
+.wrapped-highlight {
+  .img-share-twitter {
+    font-size: 16px !important;
+    text-align: center;
+    white-space: nowrap;
+    color: #fff;
+    cursor: pointer;
+    background-color: #03b3ee;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 0;
+    min-width: 32px;
+    max-width: 100%;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    &:before {
+      content: '\f099';
+      line-height: 32px;
+    }
+    &:hover {
+      background-color: #028dbc;
+    }
+  }
+}
+.post::selection {
+  background: rgba(75,198,223,0.4);
+}
+.crypto-block {
+  position: relative;
+  height: 60px;
+}
+.crypto-block a {
+  text-decoration: none;
+  color: $body-font-color;
+  transition: .3s margin-top;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  span {
+    display: block;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &:hover, &:active, &:focus {
+    margin-top: -10px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 130px;
+  }
+  /*@media only screen and (max-width: 992px) {
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 480px) {
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }*/
+}

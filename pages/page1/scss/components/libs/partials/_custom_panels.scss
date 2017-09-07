@@ -1,0 +1,197 @@
+.panel {
+  border: solid 2px $grey-border;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+  &.panel-bg {
+    background: lighten($grey-light-thin, 20%);
+  }
+  &.no-border {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+  .print-menu {
+    li {
+      margin-bottom: 15px;
+      a {
+        display: inline-block;
+        color: $dark-text;
+      }
+    }
+  }
+  hr {
+    border: 0;
+    border-bottom: solid 1px lighten($grey-light-thin, 12%);
+    height: 1px;
+    padding: 0;
+    margin: 20px -20px;
+    width: auto;
+    display: block;
+    background-color: transparent;
+  }
+  &.custom-panel-right {
+    border-radius: 4px 0 0 4px;
+    border-right: solid 1px $grey-border;
+    @include respond-to(tablets-small) {
+      border-radius: 4px;
+      border: solid 2px $grey-border;
+    }
+  }
+  &.custom-panel-center {
+    border-radius: 0;
+    border-right: solid 1px $grey-border;
+    border-left: 0;
+    @include respond-to(tablets-small) {
+      border-radius: 4px;
+      border: solid 2px $grey-border;
+    }
+  }
+  &.custom-panel-left {
+    border-radius: 0 4px 4px 0;
+    border-left: 0;
+    @include respond-to(tablets-small) {
+      border-radius: 4px;
+      border: solid 2px $grey-border;
+    }
+  }
+  &.price-panel {
+    border: solid 1px $grey-border;
+  }
+  &.brand-panel {
+    border-radius: 0;
+    border: solid 1px $grey-border;
+  }
+  .panel-link-list {
+    display: block;
+    position: relative;
+    margin: -15px;
+    padding: 15px 40px 15px 15px;
+    span {
+      font-size: 0.8rem;
+      font-weight: $fonts-semibold;
+      display: block;
+      margin-bottom: 4px;
+    }
+    article {
+      color: $dark-text;
+      line-height: 1.4rem;
+    }
+    &:after {
+      content: '\f054';
+      position: absolute;
+      top: 44%;
+      right: 15px;;
+      font-family: 'FontAwesome';
+    }
+    &:hover {
+      article {
+        color: lighten($dark-text, 10%);
+      }
+    }
+  }
+}
+
+.price-panel.custom-panel-center,
+.price-panel.custom-panel-left,
+.brand-panel.custom-panel-center,
+.brand-panel.custom-panel-left {
+  border-left: none;
+  @include respond-to(phones) {
+    border: solid 1px $grey-border;
+  }
+}
+
+/*panel-label-box*/
+.panel-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: $white;
+  display: block;
+  font-size: 0.8rem;
+  font-weight: $fonts-semibold;
+  line-height: 1.1rem;
+  padding: 10px;
+  position: absolute;
+  right: -40px;
+  text-align: center;
+  text-transform: uppercase;
+  top: 27px;
+  @include transform(rotate(45deg));
+  width: 180px;
+}
+
+.panel.selected-panel {
+  border: solid 1px $grey-border;
+  margin: -10px -2px;
+  padding: 30px 20px;
+  position: relative;
+  z-index: 100;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.2);
+  @include respond-to(phones) {
+    padding: 20px;
+    margin: 0;
+  }
+}
+
+/*Icon panel*/
+.icon-panel {
+  padding: 20px;
+  text-align: center;
+  border-radius: 4px;
+  display: block;
+  border: 2px solid transparent;
+  &:hover {
+    border: 2px solid $grey-border;
+  }
+  .icon-box {
+    margin-bottom: 20px;
+    i {
+      font-size: 2.2rem;
+    }
+    .iconBg {
+      margin: 0;
+      line-height: 54px;
+    }
+  }
+  p {
+    color: $dark-text;
+  }
+  &.without-hover {
+    &:hover {
+      border: 2px solid transparent;
+      box-shadow: 0 0 1px 1px transparent;
+    }
+  }
+}
+
+/* Same Column height */
+
+.seo-icon {
+  display: block;
+  width: 100%;
+}
+
+.seo-icon-inline {
+  width: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  margin-top: -2px;
+}
+
+
+
+
+
+
+
+
+

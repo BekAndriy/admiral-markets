@@ -1,0 +1,42 @@
+//Custom labels
+
+.label {
+  border-radius: 2px;
+  color: $white;
+  display: inline-block;
+  *display: inline;
+  vertical-align: middle;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 5px;
+  margin: -4px 0 0 5px;
+  &.label-default {
+    background: $grey-light;
+  }
+  &.label-dark-primary {
+    background: $dark-blue;
+  }
+  &.label-dark-success {
+    background: $green;
+  }
+  &.label-dark-warning {
+    background: $yellow;
+  }
+  &.label-dark-danger {
+    background: $red;
+  }
+  &.label-dark-info {
+    background: $blue;
+  }
+  &.label-dark-sky {
+    background: $sky;
+  }
+  &.label-dark-deep-blue {
+    background: $deep-blue;
+  }
+  @include respond-to(phones) {
+    padding: 2px;
+    line-height: 0.8rem;
+  }
+}

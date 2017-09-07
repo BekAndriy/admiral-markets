@@ -1,0 +1,16 @@
+.awards {
+  .awards-item {
+    a {
+      text-decoration: underline;      
+      &:hover img {
+        filter:none;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+    img {
+      filter:grayscale(1);
+      height: 70px;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+}

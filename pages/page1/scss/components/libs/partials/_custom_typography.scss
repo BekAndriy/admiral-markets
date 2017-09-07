@@ -1,0 +1,476 @@
+html, body {
+  font-size: $body-font-size;
+}
+
+body {
+  font-family: $site-font-family;
+  color: $body-text-color;
+  line-height: 1.375rem;
+  //-webkit-font-smoothing: antialiased;
+  font-weight: $fonts-regular;
+  @include respond-to(tablets-small) {
+    font-size: 0.875rem;
+    line-height: 1.250rem;
+  }
+}
+
+a {
+  cursor: pointer;
+  font-weight: $fonts-semibold;
+  color: $blue;
+  text-decoration: none;
+  font-weight: $fonts-regular;
+  line-height: 1.1rem;
+  @include transition(150ms);
+  &:hover {
+    color: $blue-hover;
+    text-decoration: none;
+    background: none;
+  }
+  &:focus {
+    color: $blue-hover;
+    text-decoration: none;
+    background: none;
+  }
+}
+
+a.underline {
+  text-decoration: underline;
+}
+
+a.dashed {
+  border-bottom: 1px dashed $blue;
+  display: inline-block;
+  line-height: 1;
+  margin-top: -3px;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.right-arrow {
+  display: inline-block;
+  margin: -3px 20px 0 0;
+  position: relative;
+  text-align: center;
+  vertical-align: bottom;
+  line-height: inherit;
+  &:after {
+    content: "\203A";
+    font-size: 1.5rem;
+    margin-left: 5px;
+    text-align: center;
+    display: inherit;
+    //vertical-align: text-bottom;
+    font-weight: inherit;
+  }
+}
+
+p {
+  clear: both;
+  margin: 0 0 20px 0;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include respond-to(tablets-large) {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+  }
+  @include respond-to(phones) {
+    font-size: 0.85rem;
+    line-height: 1.2rem;
+  }
+}
+
+/* HEADINGS styles */
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 20px 0;
+  padding: 0;
+  font-weight: $fonts-regular;
+  color: $dark-text;
+  a {
+    color: $dark-text;
+    &:hover, &:focus {
+      color: $dark-text;
+    }
+  }
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 3.6rem;
+  @include respond-to(tablets-small) {
+    font-size: 2.6rem;
+    line-height: 3.2rem;
+  }
+  @include respond-to(phones) {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+}
+
+h2 {
+  font-size: 2.1rem;
+  line-height: 2.5rem;
+  @include respond-to(tablets-small) {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+  @include respond-to(phones) {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+}
+
+h3 {
+  font-size: 1.7rem;
+  line-height: 2.2rem;
+  @include respond-to(tablets-small) {
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+  }
+  @include respond-to(phones) {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
+}
+
+h4 {
+  font-size: 1.5rem;
+  line-height: 1.9rem;
+  @include respond-to(tablets-small) {
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+  }
+  @include respond-to(phones) {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+}
+
+h5 {
+  font-size: 1.3rem;
+  line-height: 1.7rem;
+  @include respond-to(tablets-small) {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
+  @include respond-to(phones) {
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+  }
+}
+
+h6 {
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  @include respond-to(tablets-small) {
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+  }
+  @include respond-to(phones) {
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+}
+
+ul {
+  strong {
+    margin-bottom: 10px;
+  }
+}
+
+strong {
+  font-weight: $fonts-semibold;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-normal {
+  text-transform: normal;
+}
+
+.font-bold {
+  font-weight: $fonts-bold;
+}
+
+.font-semi-bold {
+  font-weight: $fonts-semibold;
+}
+
+.font-regular {
+  font-weight: $fonts-regular;
+}
+
+.font-light {
+  font-weight: $fonts-light;
+}
+
+.white-text {
+  color: $white !important;
+}
+
+.black-text {
+  color: $black;
+}
+
+.grey-text {
+  color: $grey-light;
+  &:hover {
+    color: $grey-light;
+  }
+}
+
+.green-text {
+  color: $green;
+}
+
+.green-light-text {
+  color: $green-light;
+}
+
+.red-text {
+  color: $red-light;
+}
+
+.dark-text, a.dark-text {
+  color: $body-text-color;
+  &:hover {
+    color: inherit;
+  }
+}
+
+.blue-bg {
+  background: $blue;
+}
+
+.white-bg {
+  background: $white;
+}
+
+.grey-dark-bg {
+  background: $grey-dark-bg;
+}
+
+.grey-bg {
+  background: $grey-bg !important;
+}
+
+.info-bg {
+  background: $dark-blue;
+}
+
+.danger-bg {
+  background: $red;
+}
+
+.success-bg {
+  background: $green;
+}
+
+.warning-bg {
+  background: $yellow;
+}
+
+.yellow-bg {
+  background: $yellow-light;
+}
+
+.orange-bg {
+  background: $orange;
+}
+
+.green-light-dark-bg {
+  background: $green-light-dark;
+}
+
+.deep-blue-bg {
+  background: $deep-blue;
+}
+
+.sky-bg {
+  background: $sky;
+}
+
+/* .success-bg-lighten {
+	background: lighten($green, 0.5);
+}
+.danger-bg-lighten {
+	background: lighten($red, 0.5);
+} */
+
+.caption-grey {
+  color: $grey-caption;
+  font-weight: $fonts-regular;
+}
+
+ul, li, dd, dl, dt {
+  list-style: none;
+  padding: 0;
+  line-height: inherit;
+}
+
+ul.unordered-list, ul.unordered-list li {
+  list-style: disc outside;
+}
+
+article {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+hr {
+  border: 0 none;
+  display: inline-block;
+  height: 1px;
+  margin: 20px 0;
+  padding: 0;
+  width: 100%;
+  background: none $border-color;
+}
+
+hr.footer-hr {
+  background: $border-color;
+  margin: 35px 0;
+  @include respond-to(phones) {
+    margin: 20px 0;
+  }
+}
+
+.text-muted {
+  color: darken($grey-light-thin, 15%);
+  &:hover {
+    color: darken($grey-light-thin, 15%);
+  }
+}
+
+.text-warning {
+  color: $yellow;
+}
+
+.text-danger {
+  color: $red;
+}
+
+.text-success {
+  color: $green;
+}
+
+.text-info {
+  color: $blue;
+}
+
+.text-orange {
+  color: $orange;
+}
+
+.caption {
+  margin-bottom: 20px;
+  * {
+    margin-bottom: 6px;
+  }
+}
+
+blockquote {
+  border-left: 2px solid $grey-light-thin;
+  font-size: 1.35rem;
+  line-height: normal;
+  margin: 0 0 20px;
+  padding: 0 0 0 20px;
+  @include respond-to(phones) {
+    font-size: 1rem;
+  }
+  small {
+    color: $grey-light;
+    display: block;
+    font-size: 1rem;
+    margin-top: 20px;
+    position: relative;
+    &:before {
+      content: '- ';
+    }
+    @include respond-to(phones) {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.refresh {
+  color: $dark-text;
+  display: block;
+  float: left;
+  @include transition(350ms);
+  &:hover {
+    color: lighten($dark-text, 15%);
+    @include transform(rotate(180deg));
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .text-xs-left {
+    text-align: left;
+  }
+
+  .text-xs-right {
+    text-align: right;
+  }
+
+  .text-xs-center {
+    text-align: center;
+  }
+
+  .text-xs-justify {
+    text-align: justify;
+  }
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  .text-sm-left {
+    text-align: left;
+  }
+  .text-sm-right {
+    text-align: right;
+  }
+  .text-sm-center {
+    text-align: center;
+  }
+  .text-sm-justify {
+    text-align: justify;
+  }
+}
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  .text-md-left {
+    text-align: left;
+  }
+  .text-md-right {
+    text-align: right;
+  }
+  .text-md-center {
+    text-align: center;
+  }
+  .text-md-justify {
+    text-align: justify;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .text-lg-left {
+    text-align: left;
+  }
+  .text-lg-right {
+    text-align: right;
+  }
+  .text-lg-center {
+    text-align: center;
+  }
+  .text-lg-justify {
+    text-align: justify;
+  }
+}

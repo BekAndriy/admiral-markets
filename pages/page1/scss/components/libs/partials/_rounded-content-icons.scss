@@ -1,0 +1,14 @@
+.rounded-content-ico {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.dark-grey-bg {
+    background-color: #555769;
+  }
+}

@@ -1,0 +1,27 @@
+.contacts-block {
+  h3 {
+    margin: 0 0 25px;
+    padding: 0 0 10px;
+    line-height: 1em;
+    border-bottom: 1px solid #989898;
+  }
+  address {
+    p {
+      margin-bottom: 7px;
+    }
+    .ico {
+      overflow: hidden;
+      i {
+        color: #192b53;
+        font-size: 1.2em;
+        width: 40px;
+      }
+    }
+  }
+}
+.text-about {
+  padding-top: 13px;
+  small {
+    color: #777777;
+  }
+}

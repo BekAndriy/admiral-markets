@@ -1,0 +1,102 @@
+.testimonials {
+  position: relative;
+/*  transform: translateY(-50%);*/
+  padding: 0;
+  z-index: 1;
+  clear: both;
+  .slider-testimonials-wrapper {
+    display: block;
+    position: relative;
+    .slider-testimonials {
+      padding: 0 80px;
+      position: absolute;
+      top: 0;
+      left:0;
+      right: 0;
+      transform: translateY(-50%);
+      .item {
+        padding: 20px;
+        box-sizing: border-box;
+        .inner {
+          padding: 90px 30px 20px;
+          box-sizing: border-box;
+          border-radius: 4px;
+          background-color: #FFFFFF;
+          box-shadow: 0 12px 24px 0 rgba(0,0,0,.04);
+          position: relative;
+          .head {
+            .avatar {
+              display: inline-block;
+              width: 40px;
+              height: 40px;
+              border-radius: 100%;
+              position: absolute;
+              top: 30px;
+              left: 30px;
+            }
+            .about-user {
+              position: absolute;
+              left: 81px;
+              right: 30px;
+              top: 31px;
+              .name {
+                color: #42455A;
+                font-family: Roboto;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 16px;
+                position: relative;
+                padding-top: 3px;
+              }
+              .speciality {
+                position: relative;
+                color: #8B8EA8;
+                font-family: Roboto;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 14px;
+                padding-top: 6px;
+              }
+            }
+          }
+          .content {
+            color: #8B8EA8;
+            font-family: Roboto;
+            font-size: 18px;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+  }
+  @include sliderArrow();
+  @media all and (max-width: 767px) {
+    position: relative;
+    z-index: 1;
+    transform: none;
+    .slider-testimonials-wrapper {
+      .slider-testimonials {
+        padding: 80px 0;
+        position: absolute;
+        .item {
+          padding: 0;
+          .inner {
+            box-shadow: none;
+          }
+        }
+      }
+    }
+   .slick-next, .slick-prev {
+    bottom: 0px;
+    top: initial;
+    left: auto;
+    right: auto;
+   }
+   .slick-next {
+     left: calc(50% + 10px);
+   }
+   .slick-prev {
+     right: calc(50% + 10px);
+   }
+  }
+}

@@ -1,0 +1,111 @@
+.financial-market-wat {
+  background-color: #42455A;
+  padding-top: 80px;
+  padding-bottom: 100px;
+  * {
+    color: #FFFFFF;
+    font-family: Roboto;
+    text-align: center;
+  }
+  .head {
+    position: relative;
+    padding-bottom: 40px;
+    z-index: 1;
+    .title {
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      line-height: 19px;
+      padding-bottom: 20px;
+      position: relative;
+      text-transform: uppercase;
+    }
+    .description {
+      font-size: 16px;
+      line-height: 26px;
+      position: relative;
+    }
+  }
+  .frame-container {
+    position: relative;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.46);
+    clear: both;
+    margin-top: 20px;
+    &:before {
+      content: '';
+      position: relative;
+      display: block;
+      padding-top: 85%;
+      vertical-align: top;
+    }
+  }
+  .question-btn {
+    cursor: pointer;
+    position: relative;
+  }
+  .question-btn:before {
+    content: '';
+    display: none;
+    position: absolute;
+    width: 17px;
+    height: 14px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -6px);
+    border-top: 7px solid transparent;
+    border-right: 9px solid transparent;
+    border-left: 9px solid transparent;
+    border-bottom: 7px solid #FFFFFF;
+  }
+  .question {
+    display: none;
+    position: absolute;
+    left: 80%;
+    transform: translateX(-50%);
+    top: calc(100% + 3px);
+    max-width: 470px;
+    border-radius: 4px;
+    padding: 40px 35px;
+    background-color: #FFFFFF;
+    box-shadow: 0 20px 50px 0 rgba(65,76,114,0.15);
+    min-width: 300px;
+    p {
+      color: #8B8EA8;
+      font-family: Roboto;
+      font-size: 14px;
+      line-height: 26px;
+      text-align: center;
+      font-weight: normal;
+      span {
+        display: block;
+        color: #42455A;
+        padding-top: 10px;
+      }
+    }
+  }
+  .question-btn:hover:before {
+    display: inline-block;
+  }
+  .question-btn:hover + .question {
+    display: inline-block;
+  }
+  @media all and (max-width: 767px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    .question-btn {
+      display: block;
+    }
+    .frame-container:before {
+      padding-top: 242%;
+    }
+    .top .description {
+      padding-bottom: 40px;
+    }
+    .question {
+      left: 50%;
+      top: calc(100% + 8px);
+    }
+  }
+}

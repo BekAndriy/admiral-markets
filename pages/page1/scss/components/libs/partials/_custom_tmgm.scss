@@ -1,0 +1,85 @@
+#tmgm-custom-hero {
+  width: 100%;
+  min-height: 700px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 50px;
+  // display: flex;
+  // @include justify-content(center);
+  // @include align-items(center);
+  @include respond-to(phones) {
+    min-height: 200px !important;
+    padding-top: 30px;
+  }
+  .background {
+    @include position(absolute, 0 null null null);
+    width: 100%;
+    z-index: -1;
+    display: block;
+    @include respond-to(phones) {
+      width: 200%;
+      margin: 0 0 0 -50%;
+    }
+  }
+}
+
+.btn-right-arrow {
+  &:after {
+    content: "";
+    @include position(absolute, -40px -80px null null);
+    background: url('//fxstatic.s3.amazonaws.com/images/page/tmgm/arrow.png') 0 0 no-repeat;
+    background-size: 100%;
+    width: 87px;
+    height: 78px;
+    @include respond-to(tablets-large) {
+      content: none;
+    }
+    @include respond-to(phones) {
+      display: none;
+    }
+  }
+}
+
+.tmgm-icon {
+  margin: 0 auto;
+  display: block;
+  border: solid 1px #ddd;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.6rem;
+  display: block;
+  line-height: 50px;
+  i {
+    color: $orange;
+    line-height: 1;
+  }
+}
+
+.tmgm-notice {
+  min-height: 24px;
+  position: relative;
+  padding-left: 35px;
+  small {
+    vertical-align: sub;
+  }
+  .info-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: solid 2px $orange;
+    color: $orange;
+    border-radius: 50%;
+    line-height: initial;
+    text-align: center;
+    @include position(absolute, 3px null null 0);
+  }
+  a {
+    color: $text-color;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

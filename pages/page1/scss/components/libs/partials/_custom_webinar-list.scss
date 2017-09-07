@@ -1,0 +1,270 @@
+/* Webinar list */
+.webinar-list-wrapper {
+  margin-bottom: 20px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.webinar-list-item {
+  padding: 20px;
+  border-radius: 6px;
+  border: 2px solid $grey-bg;
+  margin-bottom: 20px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+  &:hover {
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+  @include respond-to(phones) {
+    padding: 15px;
+  }
+  .webinar-caption {
+    font-weight: $fonts-semibold;
+    margin-bottom: 4px;
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+    .webinar-name {
+      margin-right: 10px;
+    }
+    @include respond-to(tablets-small) {
+      font-size: 1.4rem;
+      line-height: 2rem;
+    }
+    @include respond-to(phones) {
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+    }
+    @include respond-to(phones-small) {
+      display: block;
+    }
+  }
+  .date, .host {
+    @include respond-to(phone-small) {
+      font-size: 0.4rem;
+    }
+    i {
+      margin-right: 4px;
+      font-size: 1.1rem;
+      color: $body-text-color;
+      @include respond-to(phones-small) {
+        font-size: 0.8rem;
+      }
+    }
+  }
+  .host {
+    position: relative;
+    i {
+      position: absolute;
+      left: -18px;
+      top: -2px;
+    }
+  }
+  .label {
+    margin: 0;
+    @include respond-to(phones-small) {
+      margin: 5px 0 6px 0;
+    }
+  }
+  p {
+    margin-bottom: 0;
+    a {
+      font-size: 0.8rem;
+      @include respond-to(phones-small) {
+        font-size: 0.5rem;
+      }
+    }
+  }
+  table.custom-table {
+    font-size: 0.8rem;
+    tr {
+      &:first-child {
+        th {
+          text-align: left;
+        }
+      }
+    }
+    th, td {
+      &:first-child {
+        padding-left: 0;
+        @include respond-to(phones) {
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+  table.custom-table, th, td {
+    border: none;
+  }
+  table.custom-table th {
+    border-bottom: 1px solid $grey-border;
+  }
+  .buttons-box {
+    text-align: right;
+  }
+}
+
+.webinar-list-top-part {
+  position: relative;
+  padding-right: 80px;
+  .icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  i {
+    font-size: 34px;
+    @include respond-to(phones) {
+      font-size: 26px;
+    }
+  }
+}
+
+.webinar-list-footer {
+  border-top: 1px solid $grey-border;
+  background: none repeat scroll 0 0 lighten($grey-border, 7%);
+  border-radius: 0 0 4px 4px;
+  margin: 0 -20px -20px;
+  padding: 20px;
+  text-align: right;
+  @include respond-to(phones) {
+    padding: 15px;
+    margin: 20px -15px -15px;
+  }
+}
+
+/*webinar-list-group-wrapper*/
+.webinar-list-group-wrapper {
+  border-radius: 6px;
+  border: 2px solid $grey-bg;
+  margin-bottom: 20px;
+  overflow: hidden;
+  .webinar-list-top-part {
+    padding-right: 0;
+  }
+  .webinar-list-item {
+    padding: 20px;
+    border-radius: 0;
+    border: none;
+    margin-bottom: 0px;
+    &:hover {
+      box-shadow: none;
+    }
+    &:nth-child(2n) {
+      background: none repeat scroll 0 0 lighten($grey-border, 7%);
+      border-top: 1px solid $grey-border;
+      border-bottom: 1px solid $grey-border;
+    }
+    &:last-of-type {
+      border-bottom: none;
+    }
+    @include respond-to(phones) {
+      padding: 15px;
+    }
+    td {
+      padding: 10px 0 0 0;
+    }
+  }
+}
+
+/*webinar-list-group-wrapper small*/
+.webinar-list-group-wrapper.small {
+  .webinar-caption {
+    font-weight: $fonts-semibold;
+    color: $grey-caption;
+    margin-bottom: 4px;
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    @include respond-to(tablets-small) {
+      font-size: 0.9rem;
+      line-height: 1.1rem;
+    }
+    @include respond-to(phones) {
+      font-size: 0.8rem;
+      line-height: 1rem;
+    }
+  }
+  .date, .host {
+    i {
+      margin-right: 4px;
+      font-size: 0.8rem;
+      color: $body-text-color;
+    }
+  }
+  p {
+    font-size: 0.7rem;
+    line-height: 1.2rem;
+  }
+  .date {
+    font-size: 0.6rem;
+    @include respond-to(tablets-large) {
+      font-size: 0.5rem;
+    }
+  }
+  p {
+    a {
+      font-size: 0.6rem;
+      @include respond-to(tablets-large) {
+        font-size: 0.5rem;
+      }
+    }
+  }
+  table {
+    tr {
+      td {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+  .author-avatar-box {
+    height: 35px;
+    width: 35px;
+    .img-responsive {
+      height: 100%;
+    }
+  }
+  .label {
+    padding: 3px;
+    font-size: 0.6rem;
+  }
+}
+
+/*author-wrapper*/
+.second-author-wrapper {
+  padding-bottom: 14px;
+}
+
+.author-wrapper,
+.second-author-wrapper {
+  display: none;
+  .row {
+    margin: 0;
+    padding: 20px 0;
+  }
+  .author-avatar-box {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 65px;
+    width: 65px;
+    .img-responsive {
+      height: 100%;
+    }
+    @include respond-to(phones) {
+      height: 35px;
+      width: 35px;
+      margin: 0 auto;
+    }
+  }
+  .author-content {
+    @include respond-to(phones) {
+      text-align: center;
+    }
+  }
+} 
+
+
+

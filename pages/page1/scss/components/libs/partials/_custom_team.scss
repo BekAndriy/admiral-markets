@@ -1,0 +1,22 @@
+.profile-pic {
+  border-radius: 100%;
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: block;
+  display: flex;
+  @include justify-content(center);
+  @include align-items(center);
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.team-location {
+  display: block;
+  margin: -20px 0 20px;
+}

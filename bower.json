@@ -1,0 +1,43 @@
+{
+  "name": "admiral markets assets",
+  "version": "1.0.0",
+  "authors": [
+    "Roman Khazizov"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "/assets/common/components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "latest",
+    "bootstrap-datepicker": "^1.3.1",
+    "bootstrap-sass": "latest",
+    "bootstrap-select": "latest",
+    "bourbon": "latest",
+    "font-awesome": "latest",
+    "hammerjs": "^2.0.4",
+    "html5shiv": "latest",
+    "jquery-hammerjs": "^2.0.0",
+    "jstorage": "^0.4.12",
+    "magnific-popup": "latest",
+    "modernizr": "^2.8.3",
+    "overthrow": "^0.7.0",
+    "overthrow-dist": "^0.7.0",
+    "rangeslider.js": "latest",
+    "respond": "^1.4.2",
+    "sourcebuster": "latest",
+    "stickymojo": "~1.0.0",
+    "underscore": "^1.7.0",
+    "angular": "^1.5",
+    "moment": "^2.14.1"
+  },
+  "resolutions": {
+    "rangeslider.js": "^1.1.0"
+  }
+}

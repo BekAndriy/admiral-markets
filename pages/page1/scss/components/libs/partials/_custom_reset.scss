@@ -1,0 +1,259 @@
+//Custom reset
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    line-height: 100%;
+    font-weight: normal;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a:hover,
+a:focus,
+a:visited {
+    text-decoration: none;
+    outline: none;
+}
+
+.container {
+    max-width: 1040px;
+    @include respond-to(tablets-large) {
+        max-width: 900px;
+        width: 100%;
+    }
+}
+
+.row {
+    margin-top: 30px;
+    &.no-top-margin {
+        margin-top: 0;
+    }
+    &:first-child {
+        margin-top: 0;
+    }
+    &:last-child {
+        @include respond-to(phones) {
+            margin-top: 20px;
+        }
+    }
+}
+
+.mobile-text-center {
+    @include respond-to(phones) {
+        text-align: center;
+    }
+}
+
+.mobile-center-block {
+    @include respond-to(phones) {
+        margin: 0 auto;
+    }
+}
+
+.divider {
+    margin: 14px 0;
+    height: 1px;
+    background: $grey-border;
+}
+
+.divider-semi-transparent {
+    height: 1px;
+    background: $mobile-divider;
+}
+
+.divider-transparent {
+    height: 50px;
+}
+
+.divider-small-transparent {
+    height: 16px;
+}
+
+section {
+    padding: 25px 0;
+    @include respond-to(phones) {
+        padding: 25px 0;
+    }
+    &.no-padding {
+        padding: 0;
+    }
+    &.medium-padding {
+        padding: 40px 0;
+    }
+}
+
+.small-section {
+    padding: 20px 0;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+.top-gup {
+    margin-top: 10px;
+}
+
+.no-top-gup {
+    margin-top: 0;
+}
+
+.clear:after,
+header:after,
+.row:after,
+dl:after,
+.form-group:after,
+.pagination:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+button {
+    border: none;
+    @include transition(150ms);
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open > .btn-default.dropdown-toggle {
+    background: $white;
+}
+
+.hidden-section {
+    display: none;
+    &.active {
+        display: block;
+    }
+}
+
+.push-down-desktop {
+    margin-bottom: 25px;
+}
+
+.push-sm-down {
+    @include respond-to(tablets-large) {
+        margin-bottom: 20px !important;
+    }
+    @include respond-to(tablets-small) {
+        margin-bottom: 20px !important;
+    }
+    @include respond-to(phones) {
+        margin-bottom: 0px !important;
+    }
+}
+
+.push-down-small {
+    @include respond-to(phones) {
+        margin-bottom: 10px !important;
+    }
+}
+
+.push-down {
+    @include respond-to(phones) {
+        margin-bottom: 20px !important;
+    }
+}
+
+.custom-right {
+    padding-right: 0;
+    @include respond-to(phones) {
+        padding-right: 15px;
+    }
+}
+
+.custom-center {
+    padding: 0;
+    border-radius: 0;
+    @include respond-to(phones) {
+        padding: 0 15px;
+    }
+}
+
+.custom-left {
+    padding-left: 0;
+    @include respond-to(phones) {
+        padding-left: 15px;
+    }
+}
+
+#custom-jumbotron {
+    margin-bottom: 0;
+    background: $white;
+    border-radius: 3px;
+    h1 {
+        color: $grey;
+        font-size: 4rem;
+        line-height: 4.8rem;
+        @include respond-to(tablets-small) {
+            font-size: 3.2rem;
+            line-height: 3.6rem;
+        }
+        @include respond-to(phones) {
+            font-size: 2rem;
+            line-height: 2.4rem;
+        }
+    }
+    p {
+        font-size: inherit;
+    }
+}
+
+.right-border {
+    border-right: 1px solid rgba(0, 0, 0, 0.07);
+    &.right-border-hidden {
+        @include respond-to(tablets-small) {
+            border: none;
+        }
+    }
+}
+
+.bordered-box {
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    &.radius {
+        border-radius: 0 0 4px 4px;
+    }
+}
+
+.radius {
+    border-radius: 4px;
+}
+
+.padding20 {
+    padding: 20px;
+}
+
+.custom-height-flex {
+    display: flex;
+    @include respond-to(phones) {
+        display: block;
+    }
+}
+
+.custom-height-flex-item {
+    display: flex;
+    @include respond-to(phones) {
+        display: block;
+    }
+}
+
+.no-padding {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+// hide google conversion iframe
+iframe[name="google_conversion_frame"] {
+	display:none
+}

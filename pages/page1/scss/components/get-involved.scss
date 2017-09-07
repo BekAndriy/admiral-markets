@@ -1,0 +1,51 @@
+.get-involved {
+  padding: 60px 0 80px;
+  .title {
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 63px;
+  }
+  .description {
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 26px;
+    padding: 9px 0 43px;
+  }
+  .btn-wrapper {
+    a {
+      height: 48px;
+      width: 200px;
+      color: #2072E1;
+      background-color: #FFFFFF;
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 19px;
+      text-align: center;
+      line-height: 48px;
+      padding: 0;
+    }
+  }
+
+  @media all and (max-width: 767px) {
+    padding-bottom: 60px;
+    .title {
+      font-size: 32px;
+      line-height: 38px;
+      text-align: center;
+    }
+    .description {
+      padding-bottom: 20px;
+      text-align: center;
+    }
+    .btn-wrapper {
+      text-align: center;
+      a {
+        text-transform: uppercase;
+      }
+    }
+  }
+}

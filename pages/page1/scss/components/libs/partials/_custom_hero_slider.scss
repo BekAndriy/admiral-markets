@@ -1,0 +1,58 @@
+
+.hero_slide_background{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#hero{
+    &.carousel{
+        padding:0 !important;
+        margin:0 !important;
+
+        .item{
+            .container{
+                height: 440px !important;
+            }
+            .hero-inner {
+                @media only screen and (min-width: 1200px) and (max-width: 1370px) {
+                    padding: 0 80px;
+                }
+            }
+        }
+
+        .hero-bg{
+            max-width: initial;
+            @media only screen and (max-width: 900px) {
+                width: auto !important;
+                height: 100% !important;
+                left: auto !important;
+            }
+
+            @media only screen and (max-width: $screen-sm){
+                right: -30% !important;
+            }
+        }
+
+        .top-buffer-xl { padding-top: 100px; }
+        .top-buffer-md { padding-top: 50px; }
+        .top-buffer-sm { padding-top: 25px; }
+        @media only screen and (max-width: $screen-sm){
+            .mobile-top-buffer-xl{ padding-top: 100px; }
+        }
+    }
+}

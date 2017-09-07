@@ -1,0 +1,191 @@
+.trade-with-admiral {
+  background: #FFF;
+  padding-bottom: 130px;
+  padding-top: 80px;
+  overflow: hidden;
+  position: relative;
+  &:before, &:after {
+    content: '';
+    display: inline-block;
+    width: 260px;
+    position: absolute;
+    bottom: 85px;
+    top: 0;
+  }
+  &:before {
+    left: 0;
+    background: url('../imgs/mt4se.png') no-repeat 100% 100%;
+    background-size: contain;
+  }
+  &:after {
+    right: 0;
+    background: url('../imgs/volatility-settings.png') no-repeat 100% 100%;
+    background-size: contain;
+  }
+  .head {
+    .title {
+      color: #2072E1;
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      line-height: 19px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .description {
+      padding-top: 20px;
+      padding-bottom: 55px;
+      color: #8B8EA8;
+      font-family: Roboto;
+      font-size: 16px;
+      line-height: 26px;
+      text-align: center;
+    }
+  }
+  .item-wrapper {
+    &:first-child {
+      display: flex;
+      justify-content: flex-end;
+      .item {
+        margin-right: 65px;
+        margin-left: inherit;
+        * {
+          text-align: right;
+        }
+      }
+    }
+    &:last-child {
+      .btn {
+        .custom-btn {
+
+          width: 200px;
+          border: 1px solid rgba(37, 114, 222, 0.4);
+          border-radius: 100px;
+          background-color: rgba(255, 255, 255, 0);
+          color: #2572DE;
+        }
+      }
+    }
+    .item {
+      max-width: 350px;
+      margin-left: 65px;
+      * {
+        text-align: left;
+      }
+
+      .title {
+        color: #424559;
+        font-family: Roboto;
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 38px;
+        padding-bottom: 20px;
+      }
+      .description {
+        color: #8B8EA8;
+        font-family: Roboto;
+        font-size: 16px;
+        line-height: 26px;
+      }
+      .btn {
+        display: block;
+        padding: 40px 0 0;
+
+        .custom-btn {
+          padding: 0;
+          width: 200px;
+          height: 48px;
+          line-height: 48px;
+          text-align: center;
+        }
+      }
+    }
+  }
+  @media all and (max-width: 767px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    &:after,
+    &:before {
+      display: none;
+    }
+    .item-wrapper:first-child .item,
+    .item-wrapper .item {
+      margin: 0;
+      text-align: center;
+      position: relative;
+      &:before {
+        content: '';
+        display: block;
+        position: relative;
+        padding-top: 190px;
+        margin-bottom: 20px;
+        background: url('../imgs/mt4se@2x.png') no-repeat center center;
+        background-size: contain;
+      }
+      .title,
+      .description,
+      .btn {
+        text-align: center;
+      }
+      .btn a {
+        font-size: 16px;
+      }
+    }
+
+    .head .description {
+      padding-bottom: 40px;
+    }
+    .item-wrapper .item {
+      max-width: inherit;
+
+    }
+    .item-wrapper:first-child .item {
+      padding-bottom: 40px;
+      margin-bottom: 40px;
+      
+    }
+    .item-wrapper:first-child .item:after {
+      content: '';
+      display: block;
+      height: 2px;
+      position: absolute;
+      background: #F7F8FA;
+      width: 100vw;
+      left: -15px;
+      bottom: 0;
+    }
+    .item-wrapper:last-child .item {
+      .btn {
+        padding-top: 20px;
+      }
+    }
+    .item-wrapper:last-child .item:before {
+      background: url('../imgs/volatility-settings@2x.png') no-repeat center center;
+      background-size: contain;
+    }
+  }
+  @media all and (max-width: 1280px) and (min-width: 768px) {
+    .col-lg-6 {
+      width: 100%;
+    }
+    .item-wrapper .item,
+    .item-wrapper:first-child .item{
+      margin: 0 auto;
+      & > * {
+        text-align: center;
+      }
+    }
+    .item-wrapper:first-child .item {
+      .btn {
+        padding-bottom: 20px;
+      }
+    }
+  }
+  @media all and (min-width: 1650px) {
+    .item-wrapper .item {
+      max-width: inherit;
+    }
+  }
+}

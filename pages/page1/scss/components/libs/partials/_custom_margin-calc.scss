@@ -1,0 +1,60 @@
+$dark: #42455A;
+$darken: darken($dark, 10%);
+
+/*.subtitle {
+  font-size: larger;
+  line-height: 1.6;
+  color: darken($grey, 40%);
+}
+.page-heading {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 41px;
+}
+.label {
+  text-transform: uppercase;
+  &.label-grey {
+    color: darken($grey, 10%);
+  }
+  &.label-outline {
+    background-color: transparent;
+    border: solid 1px $blue;
+    color: $blue;
+    font-weight: 600;
+    font-size: 1;
+  }
+}
+.grey-bg {
+  background-color: $grey !important;
+};*/
+
+.dark-bg {
+  background-color: $dark;
+  h2, h2, h3, h4, h5 {
+    color: $white;
+  }
+  p {
+    color: $white;
+  }
+}
+.risk-floated {
+  background-color: rgba($dark, 0.8);
+  color: $white;
+  text-align: center;
+  font-size: calc(1rem - 0.2rem);
+  line-height: 1;
+  position: fixed;
+  z-index: 99999;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  a {
+    color: $white;
+    text-decoration: underline;
+    &:hover {
+      color: rgba($white, 0.7);
+    }
+  }
+}
