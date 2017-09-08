@@ -20,11 +20,12 @@
 
 	const candidateDesc = $('.candidate-desc'),
 		titleSliderWrapper = $('.title-slider-wrapper'),
-		mobileSlider = $('.mobile-slider');
+		mobileSlider = $('.mobile-slider'),
+		bubblesItems = $('.about-section .point');
 	let slickIndex = 0;
 
 	titleSliderWrapper.slick({
-		infinite: false,
+		infinite: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		variableWidth: true,
@@ -67,10 +68,13 @@
 
 		candidateDesc[0].slick.slickGoTo(slickIndex);
 		titleSliderWrapper[0].slick.slickGoTo(slickIndex);
+		changeBubblesActivity(slickIndex);
 	});
+
 	$('.candidates').on('click','.slick-next, .slick-prev',function() {
 		let nextIndex = parseInt($(this).parent().find('.slick-active').attr('data-slick-index'));
 		candidateDesc[0].slick.slickGoTo(nextIndex);
+		changeBubblesActivity(nextIndex);
 	});
 
 	let messageBlock = $('.message-block');
@@ -83,6 +87,14 @@
 		})
 	}, function() {
 		messageBlock.html('');
-	})
+	});
+
+	function changeBubblesActivity(slide) {
+		let bundle = bubblesItems.filter('[data-slide-id="' + slide + '"]');
+		bubblesItems.removeClass('active');
+
+		if (bundle)
+			bundle.addClass('active');
+	}
 
 }(jQuery);

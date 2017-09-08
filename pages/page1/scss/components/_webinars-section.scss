@@ -123,7 +123,6 @@
       padding-bottom: 60px;
     }
   }
-
   .block {
     box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.04);
     border-radius: 4px;
@@ -198,6 +197,9 @@
   @include sliderArrow();
   @media all and (max-width: 767px) {
     padding-bottom: 40px;
+    .top .description {
+      padding-bottom: 40px;
+    }
     .item .image:before {
       padding-top: 42.42%;
     }

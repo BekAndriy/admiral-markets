@@ -308,13 +308,16 @@
       top: 360px;
       animation-delay: .3s;
     }
-    &.point-8, &.point-9, &.point-6, &.point-4, &.point-3, &.point-2 {
+    &.point-8, &.point-9, &.point-6, &.point-4, &.point-3, &.point-2, &.point-7 {
       opacity: .2;
+    }
+    &.active {
+      opacity: 1;
     }
   }
   @media all and (max-width: 767px) {
     padding-bottom: 60px;
-    padding-top: 260px;
+    padding-top: 300px;
     .the-german-federal-e .title {
       padding-top: 0;
       line-height: 46px;
@@ -357,6 +360,9 @@
     }
     .candidates {
       max-width: calc(100vw - 30px);
+    }
+    .question-btn {
+      right: calc(100% + 18px);
     }
   }
 }
