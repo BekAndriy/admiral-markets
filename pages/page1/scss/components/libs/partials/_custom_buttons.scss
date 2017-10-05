@@ -14,33 +14,7 @@ _:-ms-fullscreen, :root .hidden-print .btn > table td:last-child {
 _:-ms-fullscreen, :root .hidden-print .btn > table td svg {
   float: none !important;
 }
-.custom-btn {
-  border-radius: 3px;
-  border-radius: 2rem;
-  box-shadow: none;
-  display: inline-block;
-  color: $white;
-  font-size: 1rem;
-  line-height: 1.1rem;
-  padding: 15px 17px;
-  background: $blue;
-  text-align: center;
-  vertical-align: middle;
-  font-weight: $fonts-semibold;
-  @include respond-to(phones) {
-    font-size: 0.875rem;
-    line-height: 1.250rem;
-    padding: 12px 14px;
-  }
-  &:hover {
-    background: darken($blue, 10%);
-    color: $white;
-  }
-  &:focus {
-    outline: none;
-    color: $white;
-    background: darken($blue, 10%);
-  }
+
   &.custom-btn-cancel {
     background: $grey;
     &:hover {
