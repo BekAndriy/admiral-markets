@@ -131,7 +131,8 @@ button {
     color: #8B8EA8;
     font-size: 15px;
     font-weight: 500;
-    line-height: 22px; }
+    line-height: 22px;
+    margin-right: 15px; }
   .dax30-main__btn {
     display: none;
     background-color: #2572DE;
@@ -373,6 +374,13 @@ button {
     padding: 40px 0; }
   .dax30-live__global-title {
     margin-bottom: 10px; }
+  .dax30-live__global-help:hover {
+    position: relative;
+    display: inline-block; }
+    .dax30-live__global-help:hover .dax30-live__global-tooltip {
+      display: block; }
+  .dax30-live__global-help-icon {
+    vertical-align: text-top; }
   .dax30-live__specifications-slider {
     position: relative; }
     .dax30-live__specifications-slider .slick-arrow {
@@ -517,7 +525,7 @@ button {
   -webkit-box-shadow: 0 20px 40px 0 rgba(66, 69, 89, 0.1);
      -moz-box-shadow: 0 20px 40px 0 rgba(66, 69, 89, 0.1);
           box-shadow: 0 20px 40px 0 rgba(66, 69, 89, 0.1);
-  padding: 40px 20px;
+  padding: 40px 20px 30px;
   margin: 40px 20px;
   -webkit-transition: -webkit-transform .5s;
   transition: -webkit-transform .5s;
@@ -582,12 +590,31 @@ button {
   .specification__link-wrapper {
     margin-top: 20px;
     text-align: center; }
+    .specification__link-wrapper .more-details {
+      display: block; }
+    .specification__link-wrapper .hide-details {
+      display: none; }
+  .specification__link-wrapper.active .more-details {
+    display: none; }
+  .specification__link-wrapper.active .hide-details {
+    display: block; }
   .specification__link {
     color: #2072E1;
     font-size: 16px;
     line-height: 19px;
     text-decoration: underline;
-    text-transform: capitalize; }
+    text-transform: capitalize;
+    background-color: transparent;
+    cursor: pointer;
+    margin-bottom: 10px; }
+  .specification__link-expanded {
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height .6s ease-in-out;
+    -o-transition: max-height .6s ease-in-out;
+    -moz-transition: max-height .6s ease-in-out;
+    transition: max-height .6s ease-in-out;
+    text-align: left; }
   @media (min-width: 767px) {
     .specification {
       margin: 40px; }
@@ -608,6 +635,43 @@ button {
         -webkit-flex-shrink: 1;
             -ms-flex-negative: 1;
                 flex-shrink: 1; } }
+
+.tooltip {
+  display: none;
+  background-color: #fff;
+  text-align: left;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: 0 0 40px 0 rgba(66, 69, 89, 0.1);
+     -moz-box-shadow: 0 0 40px 0 rgba(66, 69, 89, 0.1);
+          box-shadow: 0 0 40px 0 rgba(66, 69, 89, 0.1);
+  padding: 30px 20px 20px;
+  position: absolute;
+  z-index: 1;
+  top: 110%;
+  left: 50%;
+  max-width: 400px;
+  min-width: 320px;
+  -webkit-transform: translate(-50%, 0);
+     -moz-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+       -o-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  word-wrap: break-word; }
+  .tooltip__footer {
+    font-size: 14px;
+    margin-top: 10px;
+    display: inline-block; }
+  .tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -7px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent; }
 
 .dax30-advantages {
   padding: 60px 0;

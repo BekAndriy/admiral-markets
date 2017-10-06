@@ -7,6 +7,7 @@
 		initAwardsSlider();
 		initSpecSlider();
 		initMonthChart();
+		toggleCollapse();
 	});
 	var chart;
 	function initTabs() {
@@ -285,6 +286,18 @@
 				},
 				options: dayOptions
 			});
+		});
+	}
+
+	function toggleCollapse() {
+		$('.specification__link').click(function (event) {
+			$(event.target.parentElement).toggleClass('active');
+			var panel = $(event.target.parentElement).find('.specification__link-expanded')[0];
+			if (panel.style.maxHeight) {
+				panel.style.maxHeight = null;
+			} else {
+				panel.style.maxHeight = panel.scrollHeight + "px";
+			}
 		});
 	}
 }(jQuery);
