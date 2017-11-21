@@ -22,6 +22,17 @@
     margin-bottom: 20px; }
   .dax30-live__status-arrow-down {
     padding-bottom: 3px; }
+    .dax30-live__status-arrow-down-fill {
+      fill: #DA1924; }
+  .dax30-live__status-arrow-down.up-green-arrow {
+    padding-bottom: 3px;
+    -webkit-transform: rotate(180deg) translateY(5px);
+       -moz-transform: rotate(180deg) translateY(5px);
+        -ms-transform: rotate(180deg) translateY(5px);
+         -o-transform: rotate(180deg) translateY(5px);
+            transform: rotate(180deg) translateY(5px); }
+    .dax30-live__status-arrow-down.up-green-arrow .dax30-live__status-arrow-down-fill {
+      fill: #2ECC71; }
   .dax30-live__status-text {
     color: #42455A;
     font-size: 24px;

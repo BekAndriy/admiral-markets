@@ -34,6 +34,17 @@ $screen-lg-min: 1200px;
 
   &__status-arrow-down {
     padding-bottom: 3px;
+    &-fill {
+      fill: #DA1924;
+    }
+  }
+  &__status-arrow-down.up-green-arrow {
+    padding-bottom: 3px;
+    
+    transform: rotate(180deg) translateY(5px);
+    .dax30-live__status-arrow-down-fill {
+      fill: #2ECC71;
+    }
   }
 
   &__status-text {
