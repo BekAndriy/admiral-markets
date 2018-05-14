@@ -1,0 +1,98 @@
+$screen-sm-min: 767px;
+$screen-md-min: 992px;
+$screen-lg-min: 950px;
+
+.invest-stocks {
+  box-sizing: border-box;
+  min-height: 450px;
+  position: relative;
+  background-image: url('../imgs/hero_bg2x.png');
+  background-color: #165fbb;
+  background-position: center;
+  background-size: cover;
+  padding: 120px 0;
+
+  .invest-container {
+    max-width: $screen-lg-min;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row;
+  }
+
+  &__body {
+    max-width: 600px;
+  }
+
+  &__subtitle {
+    color: #fff;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    color: #fff;
+    text-align: left;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    text-transform: uppercase;
+    min-width: 180px;
+    background-color: #2ECC71;
+    margin: auto;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 16px;
+
+    &:hover {
+      background-color: #31b259;
+    }
+  }
+
+  &__image {
+    max-width: 260px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: $screen-lg-min) {
+
+    .invest-container {
+      flex-flow: column-reverse;
+      align-items: center;
+    }
+
+    &__image {
+      margin-bottom: 20px;
+    }
+
+    &__body * {
+      text-align: center;
+    }
+  }
+
+  @media (max-width: $screen-sm-min) {
+
+    padding: 30px 0;
+
+
+    &__image {
+      width: 140px;
+    }
+
+    &__subtitle {
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+}

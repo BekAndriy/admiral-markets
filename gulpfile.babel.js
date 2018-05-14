@@ -9,66 +9,78 @@ import autoprefixer from "gulp-autoprefixer";
 import browserSync from "browser-sync";
 var bs = browserSync.create();
 
+// fetch command line arguments
+const arg = (argList => {
 
-gulp.task('css:page', () => {
-	return gulp.src('./pages/page1/scss/**/*.scss')
+    let arg = {}, a, opt, thisOpt, curOpt;
+    for (a = 0; a < argList.length; a++) {
+
+        thisOpt = argList[a].trim();
+        opt = thisOpt.replace(/^\-+/, '');
+
+        if (opt === thisOpt) {
+
+            // argument value
+            if (curOpt) arg[curOpt] = opt;
+            curOpt = null;
+        }
+        else {
+
+            // argument name
+            curOpt = opt;
+            arg[curOpt] = true;
+        }
+    }
+    return arg;
+
+})(process.argv);
+
+let page = arg.page || 1;
+
+/**
+ * @command gulp css --page [int]
+ */
+gulp.task('css', () => {
+	return gulp.src(`./pages/page${page}/scss/**/*.scss`)
 		.pipe(sass())
 		.pipe(autoprefixer({
 			browsers: ["> 0%"]
 		}))
-		.pipe(gulp.dest('./pages/page1/css'));
-});
-
-gulp.task('js:page', () => {
-	return gulp.src([
-		'./pages/page1/js/scripts.js',
-	])
-		.pipe(babel({
-			presets: ['env']
-		}))
-		.pipe(concat('bundle.js'))
-		// .pipe(uglify())
-		.pipe(gulp.dest('./pages/page1/js'));
-});
-
-gulp.task('prcss:watcher', () => {
-	gulp.watch(['./pages/page1/scss/**/*.scss', './pages/page1/js/**/*.js'], ['css:page', 'js:page'])
-});
-
-gulp.task('css:page2', () => {
-	return gulp.src('./pages/page2/scss/**/*.scss')
-		.pipe(sass())
-		.pipe(autoprefixer({
-			browsers: ["> 0%"]
-		}))
-		.pipe(gulp.dest('./pages/page2/css'))
+		.pipe(gulp.dest(`./pages/page${page}/css`))
 		.pipe(cssmin())
 		.pipe(rename({ suffix: '.min' }))
-		.pipe(gulp.dest('./pages/page2/css'));
+		.pipe(gulp.dest(`./pages/page${page}/css`));
 });
 
-gulp.task('js:page2', () => {
+/**
+ * @command gulp js --page [int]
+ */
+gulp.task('js', () => {
 	return gulp.src([
-		'./pages/page2/js/scripts.js',
+		`./pages/page${page}/js/scripts.js`,
 	])
 		.pipe(babel({
 			presets: ['env']
 		}))
 		.pipe(concat('bundle.js'))
 		// .pipe(uglify())
-		.pipe(gulp.dest('./pages/page2/js'));
+		.pipe(gulp.dest(`./pages/page${page}/js`));
 });
 
-
+/**
+ * @command gulp serve --page [int]
+ */
 gulp.task('serve', function() {
 
     bs.init({
-        server: "./pages/page2"
+        server: `./pages/page${page}`
     });
-
-    gulp.watch("./pages/page2/*.html").on('change', bs.reload);
+    gulp.watch(`./pages/page${page}/*.html`).on('change', bs.reload);
 });
 
-gulp.task('prcss:watcher2', ['serve'], () => {
-	gulp.watch(['./pages/page2/scss/**/*.scss', './pages/page2/js/**/*.js'], ['css:page2', 'js:page2'])
+/**
+ * @command gulp prcss:watcher --page [int]
+ */
+gulp.task('watch', ['serve'], () => {
+	gulp.watch([`./pages/page${page}/scss/**/*.scss`, `./pages/page${page}/js/**/*.js`], [`css`, `js`])
 });

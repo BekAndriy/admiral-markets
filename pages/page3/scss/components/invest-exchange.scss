@@ -1,0 +1,104 @@
+$screen-sm-min: 767px;
+$screen-md-min: 992px;
+$screen-lg-min: 950px;
+
+.invest-exchange {
+  box-sizing: border-box;
+  min-height: 450px;
+  position: relative;
+  background-color: #F1F2F4;
+  padding: 100px 0 80px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  .invest-container {
+    max-width: $screen-lg-min;
+  }
+
+  &__body {
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto 30px;
+  }
+
+  &__subtitle {
+    color: #42455A;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    color: #8B8EA7;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 20px;
+  }
+
+
+  &__slider {
+
+    .slick-track {
+      height: 160px;
+    }
+
+    .slide {
+      box-sizing: border-box;
+      width: 260px;
+      height: 120px;
+      box-shadow: 0 20px 40px 0 rgba(66,69,89,0.1);
+      background: #fff;
+      padding: 10px;
+      border-radius:7px;
+      display: flex;
+      justify-content: space-between;
+      flex-flow: column;
+      margin: 0 10px;
+      outline: none;
+
+      &__logo-wrapper {
+        width: 80px;
+        height: 25px;
+        background-color: #a0a0a0;
+        margin-bottom: 5px;
+      }
+
+      &__title {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #8B8EA7;
+      }
+
+      &__price {
+        color: #2072E1;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 28px;
+        text-align: right;
+      }
+    }
+  }
+
+  @media (max-width: $screen-lg-min) {
+
+  }
+
+  @media (max-width: $screen-sm-min) {
+
+    padding: 30px 0;
+    min-height: 350px;
+
+    &__image {
+      width: 140px;
+    }
+
+    &__subtitle {
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+}
