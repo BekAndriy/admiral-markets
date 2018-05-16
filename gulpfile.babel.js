@@ -68,6 +68,15 @@ gulp.task('js', () => {
 });
 
 /**
+ * @command gulp fonts --page [int]
+ */
+gulp.task('fonts', function() {
+    return gulp.src([
+        './components/font-awesome/fonts/fontawesome-webfont.*'])
+        .pipe(gulp.dest(`./pages/page${page}/fonts`));
+});
+
+/**
  * @command gulp serve --page [int]
  */
 gulp.task('serve', function() {
@@ -82,5 +91,5 @@ gulp.task('serve', function() {
  * @command gulp prcss:watcher --page [int]
  */
 gulp.task('watch', ['serve'], () => {
-	gulp.watch([`./pages/page${page}/scss/**/*.scss`, `./pages/page${page}/js/**/*.js`], [`css`, `js`])
+	gulp.watch([`./pages/page${page}/scss/**/*.scss`, `./pages/page${page}/js/**/*.js`], [`css`, `js`, `fonts`])
 });

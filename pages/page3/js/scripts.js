@@ -7,6 +7,31 @@
 		initSpecSlider();
 		toggleCollapse();
 	});
+
+	$(window).load(function(){
+        initVideo();
+	});
+
+	function initVideo() {
+		let wrapper = $('.invest-video__player');
+		let video = wrapper.find('video');
+		let close = $('.invest-video__stop-btn');
+
+		video.attr('src', video.data('src'));
+
+		$('.invest-video__play-btn').click(function(){
+			video.get(0).play();
+			close.removeClass('invest-video__stop-btn-inactive');
+            wrapper.show();
+		});
+
+
+        $('.invest-video__stop-btn').click(function(){
+            close.addClass('invest-video__stop-btn-inactive');
+            wrapper.hide();
+        });
+	}
+
 	var chart;
 	function initTabs() {
 		$('.invest-live__tab-btn').click(function (event) {

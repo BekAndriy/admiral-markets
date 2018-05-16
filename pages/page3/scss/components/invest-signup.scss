@@ -1,0 +1,225 @@
+$screen-sm-min: 767px;
+$screen-md-min: 992px;
+$screen-lg-min: 950px;
+
+.invest-signup {
+  box-sizing: border-box;
+  position: relative;
+  background-color: #F1F2F4;
+  padding: 100px 0;
+
+  .invest-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  * {
+
+    box-sizing: border-box;
+  }
+
+  &__right {
+
+    form {
+      max-width: 560px;
+      background-color: #fff;
+      box-shadow: 0 20px 40px 0 rgba(50, 51, 57, 0.17);
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+    .form {
+
+      &__title {
+        color: #42455A;
+        font-size: 28px;
+        margin-bottom: 10px;
+        text-align: center;
+        font-weight: 500;
+      }
+
+      &__text {
+        color: #8B8EA8;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+    }
+
+    .custom-checkbox-box {
+      display: flex;
+
+      label {
+        color: #8B8EA7;
+        font-weight: normal !important;
+        padding-left: 10px;
+
+        a {
+          color: #2572DE;
+        }
+      }
+    }
+
+    .checkbox input[type="checkbox"] {
+      position: relative;
+      height: 19px;
+      width: 19px;
+      margin: 0;
+      min-width: 20px;
+      background: #fff;
+    }
+
+    .form-group {
+      label {
+        font-weight: 500;
+        font-size: 16px;
+      }
+    }
+
+    .form-control {
+      height: 48px;
+    }
+
+    .custom-btn {
+      width: 240px;
+      text-align: center;
+      background: #2572DE;
+      margin-bottom: 0;
+    }
+  }
+
+  &__body {
+    margin-bottom: 60px;
+    max-width: 450px;
+  }
+
+  &__subtitle {
+    color: #424559;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+
+  &__steps {
+    list-style: none;
+    padding-left: 5px;
+
+    .step {
+      display: flex;
+      max-width: 390px;
+      margin-bottom: 70px;
+
+      &:last-child .step__image {
+        margin-left: -10px;
+      }
+
+      &__title {
+        max-width: 300px;
+        font-size: 18px;
+        line-height: 1.5;
+        color: #424559;
+        padding-top: 10px;
+        margin-left: 20px;
+
+        a {
+          color: #2572DE;
+        }
+      }
+    }
+  }
+
+  &__text {
+    color: #424559;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: left;
+  }
+
+  @media (max-width: $screen-lg-min) {
+
+    .invest-container {
+      flex-flow: column;
+      justify-content: center;
+    }
+
+    &__right,
+    &__left {
+      display: flex;
+      align-items: center;
+      flex-flow: column;
+      justify-content: space-between;
+    }
+  }
+
+  @media (max-width: $screen-sm-min) {
+
+    .step {
+      display: flex;
+      align-items: center;
+      flex-flow: column;
+      justify-content: space-between;
+      margin-bottom: 20px;
+
+      &__image {
+        width: 60px;
+
+        svg {
+          max-width: 100%;
+        }
+      }
+
+      &__title {
+        text-align: center;
+        margin-left: 0;
+        font-size: 14px;
+        padding-top: 0;
+      }
+    }
+  }
+
+  @media (max-width: $screen-sm-min) {
+
+    padding: 30px 0;
+    min-height: 350px;
+
+    &__image {
+      width: 140px;
+    }
+
+    &__subtitle {
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .form {
+      padding: 20px;
+
+      &__title {
+        font-size: 18px;
+      }
+
+      &__text {
+        font-size: 14px;
+      }
+
+      label {
+        font-size: 12px;
+      }
+
+      .custom-btn {
+        font-size: 16px;
+        font-weight: normal;
+      }
+    }
+
+    .form-control {
+      height: 40px;
+    }
+  }
+}

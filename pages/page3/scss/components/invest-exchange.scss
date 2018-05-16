@@ -49,7 +49,7 @@ $screen-lg-min: 950px;
       background: #fff;
       padding: 10px;
       border-radius:7px;
-      display: flex;
+      display: flex !important;
       justify-content: space-between;
       flex-flow: column;
       margin: 0 10px;

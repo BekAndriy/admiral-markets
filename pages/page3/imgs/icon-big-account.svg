@@ -1,56 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
-    <title>icon-big-account</title>
-    <desc>Created with Sketch.</desc>
+<svg width="84px" height="67px" viewBox="0 0 84 67" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>F0E96843-11D2-4747-BADD-7D03F3013CE6</title>
+    <desc>Created with sketchtool.</desc>
     <defs>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
-            <stop stop-color="#E3EEFF" offset="0%"></stop>
-            <stop stop-color="#FFFFFF" offset="100%"></stop>
-        </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
-            <stop stop-color="#F9DBDD" offset="0%"></stop>
-            <stop stop-color="#FFFFFF" offset="100%"></stop>
-        </linearGradient>
+        <path d="M4,0 L65,-2.60344354e-06 C67.209139,-2.60344354e-06 69,1.7908584 69,3.9999974 C69,3.99999826 69,3.99999913 69,4 L68.9999759,36.9998508 L69.0000696,53 C69.0000722,55.209139 67.2092134,57.0000022 65.0000744,57.0000048 C65.0000496,57.0000048 65.0000248,57.0000048 65,57.0000048 L48.9999829,56.9996521 L4,57 C1.790861,57.0000157 -1.27132976e-05,55.2091674 -2.83961936e-05,53.0000284 C-2.83962608e-05,53.0000189 -2.83962944e-05,53.0000095 -2.83962944e-05,53 L0,4 C-2.705415e-16,1.790861 1.790861,4.05812251e-16 4,0 Z" id="path-1"></path>
+        <circle id="path-2" cx="16" cy="16" r="16"></circle>
     </defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="icon-big-account">
-            <rect id="Blue" fill="url(#linearGradient-1)" fill-rule="nonzero" x="32" y="0" width="68" height="62" rx="8"></rect>
-            <rect id="Red" fill="url(#linearGradient-2)" fill-rule="nonzero" x="0" y="36" width="68" height="64" rx="8"></rect>
-            <g id="Block" transform="translate(11.000000, 18.000000)">
-                <g id="Rectangle-17">
-                    <g id="path-3-link" fill="#FFFFFF">
-                        <path d="M4,-1.33232184e-15 L65,-1.33232184e-15 L65,-1.77635684e-15 C67.209139,-2.18217371e-15 69,1.790861 69,4 L69,37 L69,53 L69,53 C69,55.209139 67.209139,57 65,57 L49,57 L4,57 L4,57 C1.790861,57 3.75067146e-15,55.209139 -4.4408921e-16,53 L0,4 L-4.4408921e-16,4 C-1.6956855e-15,1.790861 1.790861,-4.82361547e-16 4,-1.33232184e-15 Z" id="path-3"></path>
+    <g id="desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Admiral.Invest-4" transform="translate(-151.000000, -3183.000000)">
+            <g id="Group-17" transform="translate(140.000000, 2969.000000)">
+                <g id="Group-15" transform="translate(0.000000, 20.000000)">
+                    <g id="Open-Account" transform="translate(0.000000, 176.000000)">
+                        <g id="icon-big-account">
+                            <g id="Block" transform="translate(11.000000, 18.000000)">
+                                <g id="Rectangle-17">
+                                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                                    <path stroke="#2585FF" stroke-width="2" d="M4,1 C2.34314575,1 1,2.34314575 1,4.00000058 L0.999971604,53.0000213 C0.999983366,54.6568755 2.34313865,56.0000118 3.99999227,56 L49.0000049,55.9996521 L65.0000732,56.0000048 C66.6569274,56.0000028 68.0000716,54.6568555 68.0000696,53.0000059 L67.9999759,36.9998501 L68,3.9999974 C68,2.34314315 66.6568542,0.999997397 65,0.999997397 L4.00000004,1 Z"></path>
+                                </g>
+                                <g id="header" transform="translate(1.000000, 6.000000)">
+                                    <path d="M0,7 L67.0074623,7" id="Path-10" stroke="#2585FF" stroke-width="2"></path>
+                                    <circle id="Oval-2" fill="#2585FF" cx="6" cy="1" r="1"></circle>
+                                    <circle id="Oval-2" fill="#2585FF" cx="9" cy="1" r="1"></circle>
+                                    <circle id="Oval-2" fill="#2585FF" cx="12" cy="1" r="1"></circle>
+                                </g>
+                                <g id="Inner" transform="translate(8.000000, 22.000000)" stroke="#2585FF" stroke-width="2">
+                                    <rect id="Rectangle-19" x="1" y="1" width="21" height="22" rx="1"></rect>
+                                    <path d="M5.17358711,23 L17.8264129,23 C17.1478847,20.1232212 14.5610622,18 11.5,18 C8.4389378,18 5.8521153,20.1232212 5.17358711,23 Z" id="Combined-Shape"></path>
+                                    <circle id="Oval-6" cx="11.5" cy="10.5" r="3.5"></circle>
+                                    <path d="M31,1 L51,1" id="Path-11" stroke-linecap="round"></path>
+                                    <path d="M31,5 L39,5" id="Path-11" stroke-linecap="round"></path>
+                                    <path d="M31,11 L49,11" id="Path-11" stroke-linecap="round"></path>
+                                    <path d="M31,15 L44,15" id="Path-11" stroke-linecap="round"></path>
+                                    <path d="M31,19 L41,19" id="Path-11" stroke-linecap="round"></path>
+                                    <path d="M31,23 L41,23" id="Path-11" stroke-linecap="round"></path>
+                                </g>
+                            </g>
+                            <g id="Check" transform="translate(63.000000, 53.000000)">
+                                <g id="Oval-4">
+                                    <use fill="#2585FF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                                    <circle stroke="#2585FF" stroke-width="2" cx="16" cy="16" r="15"></circle>
+                                </g>
+                                <polygon id="1" fill="#FFFFFF" points="17.6611328 21 15.3505859 21 15.3505859 13.6445312 13.0810547 14.3076172 13.0810547 12.5576172 17.4492188 11.046875 17.6611328 11.046875"></polygon>
+                            </g>
+                        </g>
                     </g>
-                    <path d="M4,1 C2.34314575,1 1,2.34314575 1,4 L1,53 C1,54.6568542 2.34314575,56 4,56 L65,56 C66.6568542,56 68,54.6568542 68,53 L68,4 C68,2.34314575 66.6568542,1 65,1 L4,1 Z" id="Shape" stroke="#2585FF" stroke-width="2"></path>
-                </g>
-                <g id="header" transform="translate(1.000000, 6.000000)">
-                    <path d="M0,7 L67.0074623,7" id="Path-10" stroke="#2585FF" stroke-width="2"></path>
-                    <circle id="Oval-2" fill="#2585FF" fill-rule="nonzero" cx="6" cy="1" r="1"></circle>
-                    <circle id="Oval-2" fill="#2585FF" fill-rule="nonzero" cx="9" cy="1" r="1"></circle>
-                    <circle id="Oval-2" fill="#2585FF" fill-rule="nonzero" cx="12" cy="1" r="1"></circle>
-                </g>
-                <g id="Inner" transform="translate(9.000000, 23.000000)" stroke="#2585FF" stroke-width="2">
-                    <rect id="Rectangle-19" x="0" y="0" width="21" height="22" rx="1"></rect>
-                    <path d="M4.17358711,22 L16.8264129,22 C16.1478847,19.1232212 13.5610622,17 10.5,17 C7.4389378,17 4.8521153,19.1232212 4.17358711,22 Z" id="Combined-Shape"></path>
-                    <circle id="Oval-6" cx="10.5" cy="9.5" r="3.5"></circle>
-                    <path d="M30,0 L50,0" id="Path-11" stroke-linecap="round"></path>
-                    <path d="M30,4 L38,4" id="Path-11" stroke-linecap="round"></path>
-                    <path d="M30,10 L48,10" id="Path-11" stroke-linecap="round"></path>
-                    <path d="M30,14 L43,14" id="Path-11" stroke-linecap="round"></path>
-                    <path d="M30,18 L40,18" id="Path-11" stroke-linecap="round"></path>
-                    <path d="M30,22 L40,22" id="Path-11" stroke-linecap="round"></path>
-                </g>
-            </g>
-            <g id="Check" transform="translate(63.000000, 53.000000)">
-                <g id="Oval-4">
-                    <g id="path-4-link" fill="#2585FF">
-                        <circle id="path-4" cx="16" cy="16" r="16"></circle>
-                    </g>
-                    <circle id="Oval" stroke="#2585FF" stroke-width="2" cx="16" cy="16" r="15"></circle>
-                </g>
-                <g id="1" transform="translate(11.000000, 8.000000)" fill="#FFFFFF">
-                    <polygon points="6.38769535 13 4.39843754 13 4.39843754 4.78320312 2.34082035 4.78320312 2.34082035 3.25878906 6.38769535 2.90332031"></polygon>
                 </g>
             </g>
         </g>
