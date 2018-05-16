@@ -2213,7 +2213,7 @@ if (typeof jQuery === 'undefined') {
 			wrapper.show();
 		});
 
-		$('.invest-video__stop-btn').click(function () {
+		close.click(function () {
 			close.addClass('invest-video__stop-btn-inactive');
 			video.get(0).pause();
 			wrapper.hide();
