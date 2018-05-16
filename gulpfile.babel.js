@@ -41,7 +41,9 @@ let page = arg.page || 1;
  * @command gulp css --page [int]
  */
 gulp.task('css', () => {
-	return gulp.src(`./pages/page${page}/scss/**/*.scss`)
+	return gulp.src([
+        `./pages/page${page}/scss/**/*.scss`,
+    ])
 		.pipe(sass())
 		.pipe(autoprefixer({
 			browsers: ["> 0%"]
@@ -57,6 +59,7 @@ gulp.task('css', () => {
  */
 gulp.task('js', () => {
 	return gulp.src([
+        './components/bootstrap-sass/assets/javascripts/bootstrap.js',
 		`./pages/page${page}/js/scripts.js`,
 	])
 		.pipe(babel({

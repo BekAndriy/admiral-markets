@@ -1,5 +1,5 @@
-@import "components/font-awesome/scss/font-awesome.scss";
-@import "components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../../../components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../../../components/font-awesome/scss/font-awesome.scss";
 @import "components/invest-common.scss";
 @import "components/invest-why-trade.scss";
 @import "components/invest-stocks.scss";
@@ -7,3 +7,6 @@
 @import "components/invest-video.scss";
 @import "components/invest-signup.scss";
 @import "components/invest-meta.scss";
+@import "components/invest-faq.scss";
+@import "components/invest-cta.scss";
+@import "components/invest-awards.scss";

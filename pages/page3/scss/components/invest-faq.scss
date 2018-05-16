@@ -1,0 +1,148 @@
+$screen-sm-min: 767px;
+$screen-md-min: 992px;
+$screen-lg-min: 1160px;
+
+.invest-faq {
+  box-sizing: border-box;
+  min-height: 450px;
+  position: relative;
+  background-color: #F1F2F4;
+  padding: 100px 0 80px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  .invest-container {
+    max-width: $screen-lg-min;
+    width: 100%;
+  }
+
+  &__body {
+    max-width: 720px;
+    text-align: center;
+    margin: 0 auto 50px;
+  }
+
+  &__subtitle {
+    color: #42455A;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    color: #8B8EA7;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 20px;
+  }
+
+  .accordion-heading {
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+
+    i.fa-chevron-down {
+      display: none;
+    }
+
+    span {
+      display: block;
+      padding-right: 32px;
+
+      &.collapsed {
+        .accordion-btn i.fa-chevron-down {
+          display: inline-block;
+        }
+        .accordion-btn i.fa-close {
+          display: none;
+        }
+      }
+    }
+
+    .accordion-btn {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 28px;
+      height: 28px;
+      background: #F1F2F4;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      i {
+        font-size: 14px;
+        color: #8B8EA8;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .accordion-body {
+    padding: 20px 0 10px;
+
+    ul {
+      padding-left: 15px;
+      color: #8B8EA7;
+      margin-bottom: 20px;
+
+      li {
+        font-size: 16px;
+        color: #8B8EA7;
+        line-height: 2;
+      }
+    }
+
+    p {
+
+      font-size: 16px;
+      color: #8B8EA7;
+
+      a {
+        color: #4A90E2;
+      }
+    }
+
+    .custom-btn {
+      width: 200px;
+      background-color: #2572DE;
+      font-size: 14px;
+      letter-spacing: 2px;
+      margin-top: 25px;
+    }
+  }
+
+  .accordion-tab {
+    width: 100%;
+    padding: 20px 30px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 50px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: $screen-lg-min) {
+
+  }
+
+  @media (max-width: $screen-sm-min) {
+
+    padding: 30px 0;
+    min-height: 350px;
+
+    &__image {
+      width: 140px;
+    }
+
+    &__subtitle {
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+}
