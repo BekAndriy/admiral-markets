@@ -16,6 +16,13 @@ $screen-lg-min: 1200px;
     margin-bottom: 80px;
   }
 
+  // IE 11
+  &__reasons:after {
+    content: "";
+    font-size: 0px;
+    min-height: inherit;
+  }
+
   &__reason {
     display: flex;
     flex-flow: column;
@@ -49,6 +56,7 @@ $screen-lg-min: 1200px;
     font-weight: 600;
     line-height: 28px;
     margin: 0 0 10px;
+    text-align: center;
   }
 
   &__reason-text {
@@ -64,7 +72,7 @@ $screen-lg-min: 1200px;
     min-width: 200px;
     background-color: #2572DE;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 500;
     margin-top: 20px;
   }
 
@@ -86,17 +94,20 @@ $screen-lg-min: 1200px;
     &__reason {
       flex-flow: row;
       flex-direction: column;
-      flex-basis: calc(33% - 40px);
-      flex-shrink: 0;
+      width: calc(33% - 40px);
       margin: 0;
       margin-bottom: 40px;
       &:last-child {
         padding-right: 0;
       }
-    }
+    } 
 
     &__reason-icon {
       margin: 0 0 20px;
+    }
+
+    &__reason-body {
+      width: 100%;
     }
 
     &__reason--on-desktop {

@@ -12,6 +12,7 @@ $screen-lg-min: 1160px;
   background-size: contain;
   background-repeat: no-repeat;
 
+
   .invest-container {
     max-width: $screen-lg-min;
     display: flex;
@@ -26,6 +27,13 @@ $screen-lg-min: 1160px;
     flex-flow: row;
     align-items: center;
     min-height: inherit;
+
+    // IE 11
+    &:after {
+      content: "";
+      font-size: 0px;
+      min-height: inherit;
+    }
   }
 
   &__scroll-button {
@@ -87,6 +95,10 @@ $screen-lg-min: 1160px;
       flex-flow: column;
       align-items: center;
       justify-content: center;
+      
+      &:after {
+        display: none;
+      }
     }
 
     &__subtitle {

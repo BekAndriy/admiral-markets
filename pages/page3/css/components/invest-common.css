@@ -1,0 +1,72 @@
+html {
+  font-size: 100%; }
+
+body {
+  margin: 0;
+  font-family: Roboto, "Open Sans"; }
+
+body * {
+  font-smooth: never !important;
+  -webkit-font-smoothing: antialiased !important;
+  text-shadow: none !important;
+  -webkit-text-stroke: 0; }
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+button {
+  border: none; }
+
+.custom-btn {
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-border-radius: 2rem;
+     -moz-border-radius: 2rem;
+          border-radius: 2rem;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+  display: inline-block;
+  color: white;
+  font-size: 14px;
+  line-height: 1.1rem;
+  padding: 15px 0;
+  letter-spacing: 1px;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  text-decoration: none; }
+  .custom-btn:hover {
+    background: #1364c7;
+    color: white;
+    text-decoration: none; }
+  .custom-btn:focus {
+    outline: none;
+    color: white;
+    background: #1364c7;
+    text-decoration: none; }
+
+.invest-container {
+  padding: 0 20px;
+  max-width: 1160px;
+  margin: auto;
+  font-family: Roboto; }
+  @media (min-width: 1200px) {
+    .invest-container {
+      padding: 0; } }
+
+.invest-subtitle {
+  color: #2572DE;
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 50px;
+  text-align: center;
+  margin: 0; }
+
+.invest-text {
+  color: #8B8EA7;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center; }

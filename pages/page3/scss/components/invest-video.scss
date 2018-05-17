@@ -4,7 +4,7 @@ $screen-lg-min: 950px;
 
 .invest-video {
   box-sizing: border-box;
-  min-height: 550px;
+  height: 550px;
   position: relative;
   padding: 100px 0;
   display: flex;
@@ -45,7 +45,7 @@ $screen-lg-min: 950px;
     i {
       color: #2572DE;
       font-size: 14px;
-      margin-left: 5px;
+      margin-left: 3px;
     }
   }
 
@@ -84,7 +84,7 @@ $screen-lg-min: 950px;
     min-width: 180px;
     background-color: #2572DE;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 500;
     letter-spacing: 1px;
     line-height: 16px;
 
@@ -115,7 +115,7 @@ $screen-lg-min: 950px;
   @media (max-width: $screen-sm-min) {
 
     padding: 30px 0;
-    min-height: 350px;
+    height: 350px;
 
 
     &__player {

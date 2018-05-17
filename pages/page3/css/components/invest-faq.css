@@ -1,0 +1,131 @@
+.invest-faq {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 450px;
+  position: relative;
+  background-color: #F1F2F4;
+  padding: 100px 0 80px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .invest-faq .invest-container {
+    max-width: 1160px;
+    width: 100%; }
+  .invest-faq__body {
+    max-width: 720px;
+    text-align: center;
+    margin: 0 auto 50px; }
+  .invest-faq__subtitle {
+    color: #42455A;
+    margin-bottom: 15px;
+    text-transform: uppercase; }
+  .invest-faq__text {
+    color: #8B8EA7;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 20px; }
+  .invest-faq .accordion-heading {
+    font-size: 18px;
+    font-weight: 500;
+    position: relative; }
+    .invest-faq .accordion-heading i.fa-chevron-down {
+      display: none; }
+    .invest-faq .accordion-heading span {
+      display: block;
+      padding-right: 32px; }
+      .invest-faq .accordion-heading span.collapsed .accordion-btn i.fa-chevron-down {
+        display: inline-block; }
+      .invest-faq .accordion-heading span.collapsed .accordion-btn i.fa-close {
+        display: none; }
+    .invest-faq .accordion-heading .accordion-btn {
+      position: absolute;
+      right: -7px;
+      top: 0;
+      width: 28px;
+      height: 28px;
+      background: #F1F2F4;
+      -webkit-border-radius: 50%;
+         -moz-border-radius: 50%;
+              border-radius: 50%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+         -moz-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+         -moz-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .invest-faq .accordion-heading .accordion-btn i {
+        font-size: 14px;
+        color: #8B8EA8;
+        font-weight: normal; }
+  .invest-faq .accordion-body {
+    padding: 20px 0 10px; }
+    .invest-faq .accordion-body ul {
+      padding-left: 15px;
+      color: #8B8EA7;
+      margin-bottom: 20px; }
+      .invest-faq .accordion-body ul li {
+        font-size: 16px;
+        color: #8B8EA7;
+        line-height: 2; }
+    .invest-faq .accordion-body p {
+      font-size: 16px;
+      color: #8B8EA7; }
+      .invest-faq .accordion-body p a {
+        color: #4A90E2; }
+    .invest-faq .accordion-body .custom-btn {
+      width: 200px;
+      background-color: #2572DE;
+      font-size: 14px;
+      margin-top: 25px;
+      font-weight: 500; }
+      .invest-faq .accordion-body .custom-btn:hover {
+        background-color: #2465cb; }
+  .invest-faq .accordion-tab {
+    width: 100%;
+    padding: 20px 30px;
+    background: #fff;
+    -webkit-border-radius: 0 0 4px 4px;
+       -moz-border-radius: 0 0 4px 4px;
+            border-radius: 0 0 4px 4px;
+    border: 1px solid #F3F3F3; }
+    .invest-faq .accordion-tab.open {
+      margin: 10px 0 10px;
+      -webkit-box-shadow: 0 1px 50px 0 rgba(0, 0, 0, 0.1);
+         -moz-box-shadow: 0 1px 50px 0 rgba(0, 0, 0, 0.1);
+              box-shadow: 0 1px 50px 0 rgba(0, 0, 0, 0.1); }
+  @media (max-width: 767px) {
+    .invest-faq {
+      padding: 30px 0;
+      min-height: 350px; }
+      .invest-faq__image {
+        width: 140px; }
+      .invest-faq__subtitle {
+        font-size: 20px;
+        line-height: 1.5; }
+      .invest-faq__text {
+        font-size: 14px;
+        line-height: 1.5; } }

@@ -61,7 +61,7 @@ $screen-lg-min: 1160px;
 
     .accordion-btn {
       position: absolute;
-      right: 0;
+      right: -7px;
       top: 0;
       width: 28px;
       height: 28px;
@@ -109,6 +109,7 @@ $screen-lg-min: 1160px;
       background-color: #2572DE;
       font-size: 14px;
       margin-top: 25px;
+      font-weight: 500;
 
       &:hover {
         background-color: #2465cb;
