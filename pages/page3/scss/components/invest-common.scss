@@ -2,7 +2,9 @@ $screen-sm-min: 767px;
 $screen-md-min: 992px;
 $screen-lg-min: 1200px;
 
-
+html {
+  font-size: 100%;
+}
 body {
   margin: 0;
   font-family: Roboto, "Open Sans";
@@ -27,7 +29,7 @@ button {
   display: inline-block;
   color: white;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.1rem;
   padding: 15px 0;
   letter-spacing: 1px;
   text-align: center;
@@ -37,11 +39,13 @@ button {
   &:hover {
     background: #1364c7;
     color: white;
+    text-decoration: none;
   }
   &:focus {
     outline: none;
     color: white;
     background: #1364c7;
+    text-decoration: none;
   }
 }
 .invest-container {

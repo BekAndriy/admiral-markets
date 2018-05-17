@@ -121,6 +121,7 @@ $screen-lg-min: 950px;
         color: #424559;
         padding-top: 10px;
         margin-left: 20px;
+        font-weight: 500;
 
         a {
           color: #2572DE;
@@ -130,7 +131,7 @@ $screen-lg-min: 950px;
   }
 
   &__text {
-    color: #424559;
+    color: #8B8EA7;
     font-size: 16px;
     line-height: 26px;
     text-align: left;
@@ -153,6 +154,11 @@ $screen-lg-min: 950px;
   }
 
   @media (max-width: $screen-sm-min) {
+
+
+    &__body {
+      margin-bottom: 30px;
+    }
 
     .step {
       display: flex;
@@ -214,7 +220,7 @@ $screen-lg-min: 950px;
 
       .custom-btn {
         font-size: 16px;
-        font-weight: normal;
+        font-weight: 500;
       }
     }
 

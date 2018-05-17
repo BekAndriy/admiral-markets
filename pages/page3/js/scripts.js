@@ -1,13 +1,23 @@
 'use strict';
 !function ($) {
-	$(document).ready(function () {
-		initExchangeSlider();
+    $(document).ready(function () {
+        initExchangeSlider();
         initAwardsSlider();
-	});
+        initScroll();
+    });
 
-	$(window).load(function(){
+    $(window).load(function () {
         initVideo();
-	});
+    });
+
+    function initScroll() {
+        $(".invest-stocks__scroll-button").click(function () {
+            $('html,body').animate({
+                    scrollTop: $(".invest-exchange").offset().top + 50
+                },
+                'slow');
+        });
+    }
 
     function initAwardsSlider() {
         $('.invest-awards__slider').slick({
@@ -27,46 +37,46 @@
         });
     }
 
-	function initVideo() {
-		let wrapper = $('.invest-video__player');
-		let video = wrapper.find('video');
-		let close = $('.invest-video__stop-btn');
+    function initVideo() {
+        let wrapper = $('.invest-video__player');
+        let video = wrapper.find('video');
+        let close = $('.invest-video__stop-btn');
 
-		video.attr('src', video.data('src'));
+        video.attr('src', video.data('src'));
 
-		$('.invest-video__play-btn').click(function(){
-			video.get(0).play();
-			close.removeClass('invest-video__stop-btn-inactive');
+        $('.invest-video__play-btn').click(function () {
+            video.get(0).play();
+            close.removeClass('invest-video__stop-btn-inactive');
             wrapper.show();
-		});
+        });
 
 
-        close.click(function(){
+        close.click(function () {
             close.addClass('invest-video__stop-btn-inactive');
             video.get(0).pause();
             wrapper.hide();
         });
-	}
+    }
 
-	function initExchangeSlider() {
-		var specSlider = $('.invest-exchange__slider');
-		specSlider.slick({
-			slidesToShow: 6,
-			arrows: false,
-			centerMode: true,
-			infinite: true,
-			initialSlide: 4,
-			prevArrow: false,
-			nextArrow: false,
-			variableWidth: true,
-			responsive: [
-				{
-					breakpoint: 767,
-					settings: {
-						centerPadding: '0',
-					}
-				}
-			]
-		});
-	}
+    function initExchangeSlider() {
+        var specSlider = $('.invest-exchange__slider');
+        specSlider.slick({
+            slidesToShow: 6,
+            arrows: false,
+            centerMode: true,
+            infinite: true,
+            initialSlide: 4,
+            prevArrow: false,
+            nextArrow: false,
+            variableWidth: true,
+            responsive: [
+                {
+                    breakpoint: 767,
+                    settings: {
+                        centerPadding: '0',
+                    }
+                }
+            ]
+        });
+    }
 }(jQuery);

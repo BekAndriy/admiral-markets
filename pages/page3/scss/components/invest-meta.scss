@@ -46,14 +46,12 @@ $screen-lg-min: 950px;
     min-width: 200px;
     background-color: #2ECC71;
     margin: 0;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
-    letter-spacing: 1px;
-    line-height: 16px;
+    border: 1px solid #2572DE;
 
     &-white {
       background: #fff;
-      border: 1px solid #2572DE;
       color: #2572DE;
 
       &:hover {
@@ -107,13 +105,13 @@ $screen-lg-min: 950px;
     }
 
     &__btn-wrapper {
-      flex-flow: column;
+      flex-flow: column-reverse;
       align-items: center;
 
       .custom-btn {
         max-width: 320px;
 
-        &:first-child {
+        &:last-child {
           margin-bottom: 20px;
         }
       }

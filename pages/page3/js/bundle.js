@@ -2175,68 +2175,77 @@ if (typeof jQuery === 'undefined') {
 'use strict';
 
 !function ($) {
-	$(document).ready(function () {
-		initExchangeSlider();
-		initAwardsSlider();
-	});
+    $(document).ready(function () {
+        initExchangeSlider();
+        initAwardsSlider();
+        initScroll();
+    });
 
-	$(window).load(function () {
-		initVideo();
-	});
+    $(window).load(function () {
+        initVideo();
+    });
 
-	function initAwardsSlider() {
-		$('.invest-awards__slider').slick({
-			slidesToShow: 4,
-			slidesToScroll: 1,
-			arrows: false,
-			infinite: false,
-			responsive: [{
-				breakpoint: 767,
-				settings: {
-					slidesToShow: 1,
-					dots: true
-				}
-			}]
-		});
-	}
+    function initScroll() {
+        $(".invest-stocks__scroll-button").click(function () {
+            $('html,body').animate({
+                scrollTop: $(".invest-exchange").offset().top + 50
+            }, 'slow');
+        });
+    }
 
-	function initVideo() {
-		var wrapper = $('.invest-video__player');
-		var video = wrapper.find('video');
-		var close = $('.invest-video__stop-btn');
+    function initAwardsSlider() {
+        $('.invest-awards__slider').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows: false,
+            infinite: false,
+            responsive: [{
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    dots: true
+                }
+            }]
+        });
+    }
 
-		video.attr('src', video.data('src'));
+    function initVideo() {
+        var wrapper = $('.invest-video__player');
+        var video = wrapper.find('video');
+        var close = $('.invest-video__stop-btn');
 
-		$('.invest-video__play-btn').click(function () {
-			video.get(0).play();
-			close.removeClass('invest-video__stop-btn-inactive');
-			wrapper.show();
-		});
+        video.attr('src', video.data('src'));
 
-		close.click(function () {
-			close.addClass('invest-video__stop-btn-inactive');
-			video.get(0).pause();
-			wrapper.hide();
-		});
-	}
+        $('.invest-video__play-btn').click(function () {
+            video.get(0).play();
+            close.removeClass('invest-video__stop-btn-inactive');
+            wrapper.show();
+        });
 
-	function initExchangeSlider() {
-		var specSlider = $('.invest-exchange__slider');
-		specSlider.slick({
-			slidesToShow: 6,
-			arrows: false,
-			centerMode: true,
-			infinite: true,
-			initialSlide: 4,
-			prevArrow: false,
-			nextArrow: false,
-			variableWidth: true,
-			responsive: [{
-				breakpoint: 767,
-				settings: {
-					centerPadding: '0'
-				}
-			}]
-		});
-	}
+        close.click(function () {
+            close.addClass('invest-video__stop-btn-inactive');
+            video.get(0).pause();
+            wrapper.hide();
+        });
+    }
+
+    function initExchangeSlider() {
+        var specSlider = $('.invest-exchange__slider');
+        specSlider.slick({
+            slidesToShow: 6,
+            arrows: false,
+            centerMode: true,
+            infinite: true,
+            initialSlide: 4,
+            prevArrow: false,
+            nextArrow: false,
+            variableWidth: true,
+            responsive: [{
+                breakpoint: 767,
+                settings: {
+                    centerPadding: '0'
+                }
+            }]
+        });
+    }
 }(jQuery);
