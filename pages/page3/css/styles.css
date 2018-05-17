@@ -9070,6 +9070,8 @@ button {
     text-align: center;
     background: #2572DE;
     margin-bottom: 0; }
+    .invest-signup__right .custom-btn:hover {
+      background-color: #2465cb; }
   .invest-signup__body {
     margin-bottom: 60px;
     max-width: 450px; }
@@ -9195,7 +9197,8 @@ button {
         .invest-signup .form__title {
           font-size: 18px; }
         .invest-signup .form__text {
-          font-size: 14px; }
+          font-size: 14px;
+          font-weight: normal; }
         .invest-signup .form label {
           font-size: 12px; }
         .invest-signup .form .custom-btn {
@@ -9428,17 +9431,21 @@ button {
       background-color: #2572DE;
       font-size: 14px;
       margin-top: 25px; }
+      .invest-faq .accordion-body .custom-btn:hover {
+        background-color: #2465cb; }
   .invest-faq .accordion-tab {
     width: 100%;
     padding: 20px 30px;
     background: #fff;
-    -webkit-box-shadow: 0 1px 50px 0 rgba(0, 0, 0, 0.1);
-       -moz-box-shadow: 0 1px 50px 0 rgba(0, 0, 0, 0.1);
-            box-shadow: 0 1px 50px 0 rgba(0, 0, 0, 0.1);
     -webkit-border-radius: 0 0 4px 4px;
        -moz-border-radius: 0 0 4px 4px;
             border-radius: 0 0 4px 4px;
-    margin-bottom: 10px; }
+    border: 1px solid #F3F3F3; }
+    .invest-faq .accordion-tab.open {
+      margin: 10px 0 10px;
+      -webkit-box-shadow: 0 1px 50px 0 rgba(0, 0, 0, 0.1);
+         -moz-box-shadow: 0 1px 50px 0 rgba(0, 0, 0, 0.1);
+              box-shadow: 0 1px 50px 0 rgba(0, 0, 0, 0.1); }
   @media (max-width: 767px) {
     .invest-faq {
       padding: 30px 0;

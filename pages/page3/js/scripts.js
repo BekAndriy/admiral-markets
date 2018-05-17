@@ -4,6 +4,8 @@
         initExchangeSlider();
         initAwardsSlider();
         initScroll();
+        initAccordion();
+        initCtaScroll();
     });
 
     $(window).load(function () {
@@ -14,6 +16,16 @@
         $(".invest-stocks__scroll-button").click(function () {
             $('html,body').animate({
                     scrollTop: $(".invest-exchange").offset().top + 50
+                },
+                'slow');
+        });
+    }
+
+    function initCtaScroll() {
+        $(".scroll-to-form").click(function (e) {
+            e.preventDefault();
+            $('html,body').animate({
+                    scrollTop: $(".invest-signup__form").offset().top - 10
                 },
                 'slow');
         });
@@ -35,6 +47,21 @@
                 }
             ]
         });
+    }
+
+    function initAccordion() {
+        let accordion = $('#accordion');
+        accordion.on('show.bs.collapse','.collapse', function() {
+            accordion.find('.accordion-tab').removeClass('open');
+            $(this).closest('.accordion-tab').addClass('open');
+            accordion.find('.collapse.in').collapse('hide');
+        });
+        accordion.on('hide.bs.collapse','.collapse', function() {
+            if ($(this).closest('.accordion-tab.open').length) {
+                $(this).closest('.accordion-tab').removeClass('open');
+            }
+        });
+
     }
 
     function initVideo() {
