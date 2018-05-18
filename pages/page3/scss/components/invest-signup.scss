@@ -53,7 +53,43 @@ $screen-lg-min: 950px;
       label {
         color: #8B8EA7;
         font-weight: normal !important;
-        padding-left: 10px;
+        padding-left: 30px;
+
+        &:after, &:before {
+          font-family: FontAwesome;
+          font-size: 20px;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        &:before {
+          content: "";
+          width: 18px;
+          height: 18px;
+          background-color: #fff;
+          border: 1px solid #c4c6c8;
+          position: absolute;
+          left: 0;
+          top: 0;
+          -webkit-border-radius: 3px;
+          -moz-border-radius: 3px;
+          border-radius: 3px;
+        }
+
+        &:after {
+          content: "\f00c";
+          max-width: 0;
+          overflow: hidden;
+          font-size: 11px !important;
+          opacity: .5;
+          -webkit-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+          color: #237dea;
+          position: absolute;
+          left: 4px;
+          top: 2px;
+        }
 
         a {
           color: #2572DE;
@@ -61,13 +97,25 @@ $screen-lg-min: 950px;
       }
     }
 
+    .bs-searchbox {
+      input {
+        box-shadow: none;
+
+        &:focus,
+        &:hover,
+        &:active {
+          box-shadow: none;
+        }
+      }
+    }
+
     .checkbox input[type="checkbox"] {
-      position: relative;
-      height: 19px;
-      width: 19px;
-      margin: 0;
-      min-width: 20px;
-      background: #fff;
+      display: none;
+
+      &:checked + label:after {
+        max-width: 25px;
+        opacity: 1;
+      }
     }
 
     .form-group {
@@ -77,6 +125,7 @@ $screen-lg-min: 950px;
       }
     }
 
+    button[data-id="country_list"],
     .form-control {
       height: 48px;
     }
@@ -160,7 +209,6 @@ $screen-lg-min: 950px;
 
   @media (max-width: $screen-sm-min) {
 
-
     &__body {
       margin-bottom: 30px;
     }
@@ -229,9 +277,13 @@ $screen-lg-min: 950px;
         font-weight: 500;
       }
     }
-
+    button[data-id="country_list"],
     .form-control {
       height: 40px;
+    }
+
+    .custom-checkbox-box label:after, .custom-checkbox-box label:before {
+      font-size: 16px;
     }
   }
 }

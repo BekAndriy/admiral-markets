@@ -60,6 +60,7 @@ gulp.task('css', () => {
 gulp.task('js', () => {
 	return gulp.src([
         './components/bootstrap-sass/assets/javascripts/bootstrap.js',
+        './components/bootstrap-select/js/bootstrap-select.js',
 		`./pages/page${page}/js/scripts.js`,
 	])
 		.pipe(babel({
