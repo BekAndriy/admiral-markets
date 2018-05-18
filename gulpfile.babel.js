@@ -91,7 +91,7 @@ gulp.task('serve', function() {
 });
 
 /**
- * @command gulp prcss:watcher --page [int]
+ * @command gulp watch --page [int]
  */
 gulp.task('watch', ['serve'], () => {
 	gulp.watch([`./pages/page${page}/scss/**/*.scss`, `./pages/page${page}/js/**/*.js`], [`css`, `js`, `fonts`])
