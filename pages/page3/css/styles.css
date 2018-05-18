@@ -9423,7 +9423,7 @@ button {
   .invest-faq .accordion-body {
     padding: 20px 0 10px; }
     .invest-faq .accordion-body ul {
-      padding-left: 15px;
+      padding-left: 20px;
       color: #8B8EA7;
       margin-bottom: 20px; }
       .invest-faq .accordion-body ul li {
@@ -9460,6 +9460,8 @@ button {
     .invest-faq {
       padding: 30px 0;
       min-height: 350px; }
+      .invest-faq__btn-wrapper {
+        text-align: center; }
       .invest-faq__image {
         width: 140px; }
       .invest-faq__subtitle {

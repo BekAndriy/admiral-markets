@@ -83,7 +83,7 @@ $screen-lg-min: 1160px;
     padding: 20px 0 10px;
 
     ul {
-      padding-left: 15px;
+      padding-left: 20px;
       color: #8B8EA7;
       margin-bottom: 20px;
 
@@ -138,6 +138,10 @@ $screen-lg-min: 1160px;
 
     padding: 30px 0;
     min-height: 350px;
+
+    &__btn-wrapper {
+      text-align: center;
+    }
 
     &__image {
       width: 140px;
