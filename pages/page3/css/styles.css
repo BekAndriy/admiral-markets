@@ -9129,7 +9129,11 @@ button {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-image: url("../imgs/video_bg.png");
   background-color: #165fbb;
+  background-position: center;
+  -moz-background-size: cover;
+       background-size: cover;
   width: 100%; }
   .invest-video__body {
     text-align: center; }
@@ -9142,6 +9146,15 @@ button {
     line-height: 26px;
     display: none; }
   .invest-video__play-btn {
+    position: absolute;
+    z-index: 100;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+         -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;

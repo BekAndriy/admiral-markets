@@ -3947,6 +3947,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 'use strict';
 
 !function ($) {
+    var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
     $(document).ready(function () {
         initExchangeSlider();
         initAwardsSlider();
@@ -4009,55 +4011,63 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     function initVideo() {
         var wrapper = $('.invest-video');
         var video = wrapper.find('video');
+        var playBtn = wrapper.find('.invest-video__play-btn');
+        var userAgent = window.navigator.userAgent;
 
         video.attr('src', video.data('src'));
 
-        video.on('click', function () {
-            video.get(0).muted = !video.get(0).muted;
-        });
+        if ((userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) && is_safari) {
+            playBtn.css('display', 'flex');
+            playBtn.on('click', function () {
+                video.get(0).muted = false;
+                video.get(0).play();
+            });
+        } else {
+            video.on('click', function () {
+                video.get(0).muted = !video.get(0).muted;
+            });
 
-        $(window).scroll(function () {
-            var scroll = $(this).scrollTop();
-            var videoHeight = video.height();
-            var docViewBottom = scroll + $(this).height();
-            var elemTop = video.offset().top;
-            var elemCenter = elemTop + videoHeight / 2;
-            var elemBottom = elemTop + videoHeight;
+            $(window).scroll(function () {
+                var scroll = $(this).scrollTop();
+                var videoHeight = video.height();
+                var docViewBottom = scroll + $(this).height();
+                var elemTop = video.offset().top;
+                var elemCenter = elemTop + videoHeight / 2;
+                var elemBottom = elemTop + videoHeight;
 
-            var isPlaying = video.get(0).currentTime > 0 && !video.get(0).paused && !video.get(0).ended && video.get(0).readyState > 2;
+                var isPlaying = video.get(0).currentTime > 0 && !video.get(0).paused && !video.get(0).ended && video.get(0).readyState > 2;
 
-            // if (((elemBottom <= docViewBottom) && (elemTop >= scroll))
-            //     || ((elemBottom <= docViewBottom) && (elemTop + videoHeight/5 >= scroll))
-            //     || ((elemBottom >= docViewBottom) && (elemTop <= scroll))) {
+                // if (((elemBottom <= docViewBottom) && (elemTop >= scroll))
+                //     || ((elemBottom <= docViewBottom) && (elemTop + videoHeight/5 >= scroll))
+                //     || ((elemBottom >= docViewBottom) && (elemTop <= scroll))) {
 
-            if (elemCenter < docViewBottom && elemTop > scroll || elemBottom < docViewBottom && elemCenter > scroll || elemBottom >= docViewBottom && elemTop <= scroll) {
+                if (elemCenter < docViewBottom && elemTop > scroll || elemBottom < docViewBottom && elemCenter > scroll || elemBottom >= docViewBottom && elemTop <= scroll) {
 
-                !isPlaying && video.get(0).play();
-            } else {
-                isPlaying && video.get(0).pause();
-            }
-        });
+                    !isPlaying && video.get(0).play();
+                } else {
+                    isPlaying && video.get(0).pause();
+                }
+            });
+        }
     }
 
     function initExchangeSlider() {
-        var specSlider = $('.invest-exchange__slider');
-        specSlider.slick({
-            slidesToShow: 6,
-            arrows: false,
-            centerMode: true,
-            infinite: true,
-            initialSlide: 4,
-            prevArrow: false,
-            nextArrow: false,
-            variableWidth: true,
-            autoplay: true,
-            autoplaySpeed: 2000,
-            responsive: [{
-                breakpoint: 767,
-                settings: {
-                    centerPadding: '0'
-                }
-            }]
+
+        var exSlider = $(".invest-exchange__slider");
+        exSlider.flickity({
+            wrapAround: true,
+            autoPlay: 2500,
+            groupCells: '20%',
+            imagesLoaded: true,
+            pauseAutoPlayOnHover: false,
+            prevNextButtons: false,
+            pageDots: false
+        }, 1000);
+        exSlider.mouseleave(function (e) {
+            $(this).flickity('playPlayer');
+        });
+        exSlider.bind('touchend', function (e) {
+            $(this).flickity('playPlayer');
         });
     }
 }(jQuery);

@@ -6,12 +6,15 @@ $screen-lg-min: 950px;
   box-sizing: border-box;
   //height: 550px;
   position: relative;
- // padding: 100px 0;
+  // padding: 100px 0;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
+  background-image: url('../imgs/video_bg.png');
   background-color: #165fbb;
+  background-position: center;
+  background-size: cover;
   width: 100%;
 
   &__body {
@@ -31,6 +34,12 @@ $screen-lg-min: 950px;
   }
 
   &__play-btn {
+    position: absolute;
+    z-index: 100;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
     box-sizing: border-box;
     width: 48px;
     height: 48px;
@@ -106,7 +115,6 @@ $screen-lg-min: 950px;
     //transform: translate(-50%, -50%);
 
   }
-
 
   video {
     max-width: 100%;

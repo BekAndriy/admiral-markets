@@ -1,5 +1,7 @@
 'use strict';
 !function ($) {
+    let is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
     $(document).ready(function () {
         initExchangeSlider();
         initAwardsSlider();
@@ -67,60 +69,66 @@
     function initVideo() {
         let wrapper = $('.invest-video');
         let video = wrapper.find('video');
+        let playBtn = wrapper.find('.invest-video__play-btn');
+        let userAgent = window.navigator.userAgent;
 
         video.attr('src', video.data('src'));
 
-        video.on('click', function(){
-            video.get(0).muted = !video.get(0).muted;
-        });
+        if ((userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) && is_safari) {
+            playBtn.css('display', 'flex');
+            playBtn.on('click', function () {
+                video.get(0).muted = false;
+                video.get(0).play();
+            });
+        } else {
+            video.on('click', function () {
+                video.get(0).muted = !video.get(0).muted;
+            });
 
-        $(window).scroll(function () {
-            let scroll = $(this).scrollTop();
-            let videoHeight = video.height();
-            let docViewBottom = scroll + $(this).height();
-            let elemTop = video.offset().top;
-            let elemCenter = elemTop + videoHeight/2;
-            let elemBottom = elemTop + videoHeight;
+            $(window).scroll(function () {
+                let scroll = $(this).scrollTop();
+                let videoHeight = video.height();
+                let docViewBottom = scroll + $(this).height();
+                let elemTop = video.offset().top;
+                let elemCenter = elemTop + videoHeight / 2;
+                let elemBottom = elemTop + videoHeight;
 
-            let isPlaying = video.get(0).currentTime > 0 && !video.get(0).paused && !video.get(0).ended
-                && video.get(0).readyState > 2;
+                let isPlaying = video.get(0).currentTime > 0 && !video.get(0).paused && !video.get(0).ended
+                    && video.get(0).readyState > 2;
 
-            // if (((elemBottom <= docViewBottom) && (elemTop >= scroll))
-            //     || ((elemBottom <= docViewBottom) && (elemTop + videoHeight/5 >= scroll))
-            //     || ((elemBottom >= docViewBottom) && (elemTop <= scroll))) {
+                // if (((elemBottom <= docViewBottom) && (elemTop >= scroll))
+                //     || ((elemBottom <= docViewBottom) && (elemTop + videoHeight/5 >= scroll))
+                //     || ((elemBottom >= docViewBottom) && (elemTop <= scroll))) {
 
                 if (((elemCenter < docViewBottom) && (elemTop > scroll))
                     || ((elemBottom < docViewBottom) && (elemCenter > scroll))
                     || ((elemBottom >= docViewBottom) && (elemTop <= scroll))) {
 
-                !isPlaying && video.get(0).play();
-            } else {
-                isPlaying && video.get(0).pause();
-            }
-        });
+                    !isPlaying && video.get(0).play();
+                } else {
+                    isPlaying && video.get(0).pause();
+                }
+            });
+        }
     }
 
     function initExchangeSlider() {
-        let specSlider = $('.invest-exchange__slider');
-        specSlider.slick({
-            slidesToShow: 6,
-            arrows: false,
-            centerMode: true,
-            infinite: true,
-            initialSlide: 4,
-            prevArrow: false,
-            nextArrow: false,
-            variableWidth: true,
-            autoplay: true,
-            autoplaySpeed: 2000,
-            responsive: [
-                {
-                    breakpoint: 767,
-                    settings: {
-                        centerPadding: '0',
-                    }
-                }
-            ]
+
+        let exSlider = $( ".invest-exchange__slider" );
+        exSlider.flickity({
+            wrapAround: true,
+            autoPlay:2500,
+            groupCells: '20%',
+            imagesLoaded: true,
+            pauseAutoPlayOnHover: false,
+            prevNextButtons: false,
+            pageDots: false
+        }, 1000);
+        exSlider.mouseleave(function(e) {
+            $(this).flickity('playPlayer')
+        });
+        exSlider.bind('touchend', function(e) {
+            $(this).flickity('playPlayer')
         });
     }
 }(jQuery);
