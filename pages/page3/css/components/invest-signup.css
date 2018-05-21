@@ -101,6 +101,10 @@
       -webkit-box-shadow: none;
          -moz-box-shadow: none;
               box-shadow: none; }
+  .invest-signup__right .bs-caret {
+    position: absolute;
+    right: 0;
+    top: 50%; }
   .invest-signup__right .checkbox input[type="checkbox"] {
     display: none; }
     .invest-signup__right .checkbox input[type="checkbox"]:checked + label:after {
@@ -109,6 +113,11 @@
   .invest-signup__right .form-group label {
     font-weight: 500;
     font-size: 16px; }
+  .invest-signup__right button[data-id="country_list"] {
+    padding-top: 14px;
+    padding-bottom: 14px; }
+    .invest-signup__right button[data-id="country_list"] .filter-option {
+      vertical-align: middle; }
   .invest-signup__right button[data-id="country_list"],
   .invest-signup__right .form-control {
     height: 48px; }
@@ -256,5 +265,8 @@
       .invest-signup button[data-id="country_list"],
       .invest-signup .form-control {
         height: 40px; }
+      .invest-signup button[data-id="country_list"] {
+        padding-top: 6px;
+        padding-bottom: 6px; }
       .invest-signup .custom-checkbox-box label:after, .invest-signup .custom-checkbox-box label:before {
         font-size: 16px; } }

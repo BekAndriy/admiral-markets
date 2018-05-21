@@ -7,10 +7,10 @@ $screen-lg-min: 950px;
   //height: 550px;
   position: relative;
   // padding: 100px 0;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: center;
+  display: block;
+  //justify-content: space-between;
+  //flex-direction: column;
+  //align-items: center;
   background-image: url('../imgs/video_bg.png');
   background-color: #165fbb;
   background-position: center;
@@ -120,6 +120,7 @@ $screen-lg-min: 950px;
     max-width: 100%;
     max-height: 100%;
     width: 100%;
+    vertical-align: middle;
   }
 
   @media (max-width: $screen-lg-min) {

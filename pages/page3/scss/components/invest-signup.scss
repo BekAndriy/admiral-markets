@@ -109,6 +109,12 @@ $screen-lg-min: 950px;
       }
     }
 
+    .bs-caret {
+      position: absolute;
+      right: 0;
+      top: 50%;
+    }
+
     .checkbox input[type="checkbox"] {
       display: none;
 
@@ -122,6 +128,15 @@ $screen-lg-min: 950px;
       label {
         font-weight: 500;
         font-size: 16px;
+      }
+    }
+
+    button[data-id="country_list"] {
+      padding-top: 14px;
+      padding-bottom: 14px;
+
+      .filter-option {
+        vertical-align: middle;
       }
     }
 
@@ -280,6 +295,11 @@ $screen-lg-min: 950px;
     button[data-id="country_list"],
     .form-control {
       height: 40px;
+    }
+
+    button[data-id="country_list"] {
+      padding-top: 6px;
+      padding-bottom: 6px;
     }
 
     .custom-checkbox-box label:after, .custom-checkbox-box label:before {
