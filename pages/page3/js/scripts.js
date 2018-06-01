@@ -117,10 +117,10 @@
         let exSlider = $( ".invest-exchange__slider" );
         exSlider.flickity({
             wrapAround: true,
-            autoPlay:2500,
-            groupCells: '20%',
+            autoPlay: 2500,
+            groupCells: '10%',
             imagesLoaded: true,
-            pauseAutoPlayOnHover: false,
+            pauseAutoPlayOnHover: true,
             prevNextButtons: false,
             pageDots: false
         }, 1000);

@@ -4057,9 +4057,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         exSlider.flickity({
             wrapAround: true,
             autoPlay: 2500,
-            groupCells: '20%',
+            groupCells: '10%',
             imagesLoaded: true,
-            pauseAutoPlayOnHover: false,
+            pauseAutoPlayOnHover: true,
             prevNextButtons: false,
             pageDots: false
         }, 1000);
