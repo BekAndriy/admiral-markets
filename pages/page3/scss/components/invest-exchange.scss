@@ -68,10 +68,15 @@ $screen-lg-min: 950px;
         display: flex;
         justify-content: space-between;
         flex-flow: row;
+        overflow: hidden;
 
         img {
           max-height: 100%;
         }
+      }
+
+      &__flag {
+        margin-top: -6px;
       }
 
       &__title {

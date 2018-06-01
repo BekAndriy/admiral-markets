@@ -9093,9 +9093,12 @@ button {
          -moz-box-orient: horizontal;
          -moz-box-direction: normal;
           -ms-flex-flow: row;
-              flex-flow: row; }
+              flex-flow: row;
+      overflow: hidden; }
       .invest-exchange__slider .slide__logo-wrapper img {
         max-height: 100%; }
+    .invest-exchange__slider .slide__flag {
+      margin-top: -6px; }
     .invest-exchange__slider .slide__title {
       font-size: 16px;
       line-height: 1.5;
